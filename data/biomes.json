@@ -1,1 +1,162 @@
-[]
+[
+  {
+    "id": "plaza",
+    "name": "Esplanade",
+    "world": "Vallée Dreamlight",
+    "content_access": "base_game_or_free_update",
+    "unlock_cost": {
+      "currency": "Dreamlight",
+      "amount": 0
+    },
+    "unlock_condition": "Zone de départ",
+    "unlocked": false,
+    "well_upgrade_cost": null,
+    "goofys_stall": false,
+    "stall_unlock": "Aucun stand de Dingo sur l'Esplanade",
+    "characters": [],
+    "resources": [],
+    "obstacles": [],
+    "upgrades": [],
+    "image": null
+  },
+  {
+    "id": "peaceful_meadow",
+    "name": "Prairie tranquille",
+    "world": "Vallée Dreamlight",
+    "content_access": "base_game_or_free_update",
+    "unlock_cost": {
+      "currency": "Dreamlight",
+      "amount": 0
+    },
+    "unlock_condition": "Accessible après l'introduction",
+    "unlocked": false,
+    "well_upgrade_cost": null,
+    "goofys_stall": true,
+    "stall_unlock": "Réparer le stand pendant la quête « Expédition de pêche »",
+    "characters": [],
+    "resources": [],
+    "obstacles": [],
+    "upgrades": [],
+    "image": null
+  },
+  {
+    "id": "dazzle_beach",
+    "name": "Plage enchantée",
+    "world": "Vallée Dreamlight",
+    "content_access": "base_game_or_free_update",
+    "unlock_cost": {
+      "currency": "Dreamlight",
+      "amount": 1000
+    },
+    "unlock_condition": "Débloquer l'accès depuis la Prairie tranquille",
+    "unlocked": false,
+    "well_upgrade_cost": null,
+    "goofys_stall": true,
+    "stall_unlock": "Réparer le stand de Dingo dans le biome",
+    "characters": [],
+    "resources": [],
+    "obstacles": [],
+    "upgrades": [],
+    "image": null
+  },
+  {
+    "id": "forest_of_valor",
+    "name": "Forêt du courage",
+    "world": "Vallée Dreamlight",
+    "content_access": "base_game_or_free_update",
+    "unlock_cost": {
+      "currency": "Dreamlight",
+      "amount": 2000
+    },
+    "unlock_condition": "Débloquer l'accès depuis l'Esplanade",
+    "unlocked": false,
+    "well_upgrade_cost": null,
+    "goofys_stall": true,
+    "stall_unlock": "Réparer le stand de Dingo dans le biome",
+    "characters": [],
+    "resources": [],
+    "obstacles": [],
+    "upgrades": [],
+    "image": null
+  },
+  {
+    "id": "glade_of_trust",
+    "name": "Bayou de la confiance",
+    "world": "Vallée Dreamlight",
+    "content_access": "base_game_or_free_update",
+    "unlock_cost": {
+      "currency": "Dreamlight",
+      "amount": 3000
+    },
+    "unlock_condition": "Débloquer l'accès depuis la Prairie tranquille",
+    "unlocked": false,
+    "well_upgrade_cost": null,
+    "goofys_stall": true,
+    "stall_unlock": "Réparer le stand de Dingo dans le biome",
+    "characters": [],
+    "resources": [],
+    "obstacles": [],
+    "upgrades": [],
+    "image": null
+  },
+  {
+    "id": "sunlit_plateau",
+    "name": "Plateau ensoleillé",
+    "world": "Vallée Dreamlight",
+    "content_access": "base_game_or_free_update",
+    "unlock_cost": {
+      "currency": "Dreamlight",
+      "amount": 5000
+    },
+    "unlock_condition": "Débloquer l'accès depuis l'Esplanade",
+    "unlocked": false,
+    "well_upgrade_cost": null,
+    "goofys_stall": true,
+    "stall_unlock": "Réparer le stand de Dingo dans le biome",
+    "characters": [],
+    "resources": [],
+    "obstacles": [],
+    "upgrades": [],
+    "image": null
+  },
+  {
+    "id": "frosted_heights",
+    "name": "Hauteurs glacées",
+    "world": "Vallée Dreamlight",
+    "content_access": "base_game_or_free_update",
+    "unlock_cost": {
+      "currency": "Dreamlight",
+      "amount": 7000
+    },
+    "unlock_condition": "Débloquer l'accès depuis la Forêt du courage",
+    "unlocked": false,
+    "well_upgrade_cost": null,
+    "goofys_stall": true,
+    "stall_unlock": "Réparer le stand de Dingo dans le biome",
+    "characters": [],
+    "resources": [],
+    "obstacles": [],
+    "upgrades": [],
+    "image": null
+  },
+  {
+    "id": "forgotten_lands",
+    "name": "Terres oubliées",
+    "world": "Vallée Dreamlight",
+    "content_access": "base_game_or_free_update",
+    "unlock_cost": {
+      "currency": "Dreamlight",
+      "amount": 10000
+    },
+    "unlock_condition": "Débloquer l'accès depuis le Plateau ensoleillé",
+    "unlocked": false,
+    "well_upgrade_cost": null,
+    "goofys_stall": true,
+    "stall_unlock": "Réparer le stand de Dingo dans le biome",
+    "characters": [],
+    "resources": [],
+    "obstacles": [],
+    "upgrades": [],
+    "image": null
+  }
+]
