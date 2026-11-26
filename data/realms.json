@@ -1,1 +1,417 @@
-[]
+[
+  {
+    "id": "ratatouille",
+    "name": "Royaume de Ratatouille",
+    "universe": "Ratatouille",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Rémy"
+    ],
+    "realm_reward_type": "restaurant",
+    "realm_features": "Cuisine et Chez Rémy",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "moana",
+    "name": "Royaume de Vaiana",
+    "universe": "Vaiana",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Vaiana",
+      "Maui"
+    ],
+    "realm_reward_type": "bateau",
+    "realm_features": "Bateau de pêche de Vaiana",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "wall_e",
+    "name": "Royaume de WALL-E",
+    "universe": "WALL-E",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "WALL-E"
+    ],
+    "realm_reward_type": "jardin",
+    "realm_features": "Jardin de WALL-E",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "frozen",
+    "name": "Royaume de La Reine des neiges",
+    "universe": "La Reine des neiges",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Anna",
+      "Elsa"
+    ],
+    "realm_reward_type": "personnages",
+    "realm_features": "Quêtes permettant de faire venir Anna puis Elsa",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "lion_king",
+    "name": "Royaume du Roi Lion",
+    "universe": "Le Roi Lion",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Nala",
+      "Simba"
+    ],
+    "realm_reward_type": "personnages",
+    "realm_features": "Quêtes permettant de faire venir Nala et Simba",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "toy_story",
+    "name": "Royaume de Toy Story",
+    "universe": "Toy Story",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Buzz l'Éclair",
+      "Woody"
+    ],
+    "realm_reward_type": "personnages",
+    "realm_features": "Quêtes permettant de faire venir Buzz et Woody",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "monsters_inc",
+    "name": "Royaume de Monstres et Cie",
+    "universe": "Monstres et Cie",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Bob Razowski",
+      "Sully"
+    ],
+    "realm_reward_type": "personnages",
+    "realm_features": "Quêtes permettant de faire venir Bob et Sully",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "beauty_beast",
+    "name": "Royaume de La Belle et la Bête",
+    "universe": "La Belle et la Bête",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Belle",
+      "La Bête"
+    ],
+    "realm_reward_type": "personnages",
+    "realm_features": "Quêtes permettant de faire venir Belle et la Bête",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "mulan",
+    "name": "Royaume de Mulan",
+    "universe": "Mulan",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Mulan",
+      "Mushu"
+    ],
+    "realm_reward_type": "personnages",
+    "realm_features": "Quêtes permettant de faire venir Mulan et Mushu",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "hercules",
+    "name": "Royaume d'Hercule",
+    "universe": "Hercule",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Hercule",
+      "Phil"
+    ],
+    "realm_reward_type": "personnages",
+    "realm_features": "Quêtes permettant de faire venir Hercule et Phil",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "aladdin",
+    "name": "Royaume d'Aladdin",
+    "universe": "Aladdin",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Aladdin",
+      "Jasmine"
+    ],
+    "realm_reward_type": "personnages",
+    "realm_features": "Quêtes permettant de faire venir Aladdin et Jasmine",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "alice",
+    "name": "Royaume d'Alice au pays des merveilles",
+    "universe": "Alice au pays des merveilles",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Alice",
+      "Chat du Cheshire"
+    ],
+    "realm_reward_type": "personnages",
+    "realm_features": "Quêtes du royaume pour faire venir Alice et le Chat du Cheshire",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "inside_out",
+    "name": "Royaume de Vice-versa",
+    "universe": "Vice-versa",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Joie",
+      "Tristesse"
+    ],
+    "realm_reward_type": "personnages",
+    "realm_features": "Quêtes du royaume pour faire venir Joie et Tristesse",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "lady_tramp",
+    "name": "Royaume de La Belle et le Clochard",
+    "universe": "La Belle et le Clochard",
+    "content_type": "dream_castle_realm",
+    "access": "base_game_or_free_update",
+    "required_expansion": null,
+    "dreamlight_cost": {
+      "type": "dynamic_order",
+      "value": null,
+      "note": "Le coût dépend de l'ordre d'ouverture des portes. La première porte parmi Ratatouille, Vaiana et WALL-E est gratuite ; les deux autres coûtent 1 500 Dreamlight chacune. Les portes suivantes suivent le barème actuel du jeu."
+    },
+    "unlock_conditions": null,
+    "characters": [
+      "Lady",
+      "Clochard"
+    ],
+    "realm_reward_type": "personnages",
+    "realm_features": "Quêtes du royaume pour faire venir Lady et Clochard",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Coût à afficher selon l'ordre d'ouverture, pas un prix fixe par royaume."
+  },
+  {
+    "id": "eternity_isle",
+    "name": "L'Île de l'Éternité",
+    "universe": null,
+    "content_type": "paid_expansion_area",
+    "access": "paid_content",
+    "required_expansion": "A Rift in Time",
+    "dreamlight_cost": {
+      "type": "not_applicable",
+      "value": null
+    },
+    "unlock_conditions": null,
+    "characters": [],
+    "realm_reward_type": "expansion_area",
+    "realm_features": "Nouvelle région et personnages de l'extension",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Zone d'extension, ce n'est pas une porte du Château des rêves."
+  },
+  {
+    "id": "storybook_vale",
+    "name": "Le Pays des contes",
+    "universe": null,
+    "content_type": "paid_expansion_area",
+    "access": "paid_content",
+    "required_expansion": "The Storybook Vale",
+    "dreamlight_cost": {
+      "type": "not_applicable",
+      "value": null
+    },
+    "unlock_conditions": null,
+    "characters": [],
+    "realm_reward_type": "expansion_area",
+    "realm_features": "Nouvelle région et personnages de l'extension",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Zone d'extension, ce n'est pas une porte du Château des rêves."
+  },
+  {
+    "id": "wishblossom_ranch",
+    "name": "Wishblossom Ranch",
+    "universe": null,
+    "content_type": "paid_expansion_area",
+    "access": "paid_content",
+    "required_expansion": "Wishblossom Ranch",
+    "dreamlight_cost": {
+      "type": "not_applicable",
+      "value": null
+    },
+    "unlock_conditions": null,
+    "characters": [],
+    "realm_reward_type": "expansion_area",
+    "realm_features": "Contenu de l'aventure/extension",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Zone d'extension, ce n'est pas une porte du Château des rêves."
+  },
+  {
+    "id": "honeyglow_woods",
+    "name": "Honeyglow Woods",
+    "universe": null,
+    "content_type": "paid_expansion_area",
+    "access": "paid_content",
+    "required_expansion": "Honeyglow Woods Adventure Pack",
+    "dreamlight_cost": {
+      "type": "not_applicable",
+      "value": null
+    },
+    "unlock_conditions": null,
+    "characters": [],
+    "realm_reward_type": "expansion_area",
+    "realm_features": "Contenu additionnel",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Zone d'extension, ce n'est pas une porte du Château des rêves."
+  },
+  {
+    "id": "keepsake_sea",
+    "name": "The Keepsake Sea",
+    "universe": null,
+    "content_type": "paid_expansion_area",
+    "access": "paid_content",
+    "required_expansion": "The Keepsake Sea",
+    "dreamlight_cost": {
+      "type": "not_applicable",
+      "value": null
+    },
+    "unlock_conditions": null,
+    "characters": [],
+    "realm_reward_type": "expansion_area",
+    "realm_features": "Contenu additionnel",
+    "realm_unlocked": false,
+    "image": null,
+    "notes": "Zone d'extension, ce n'est pas une porte du Château des rêves."
+  }
+]
