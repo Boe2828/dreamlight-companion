@@ -1,0 +1,1424 @@
+[
+  {
+    "id": "character_001",
+    "name": "Aladdin",
+    "universe": "Aladdin",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": "aladdin",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_002",
+    "name": "Alice",
+    "universe": "Alice au pays des merveilles",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Alice au pays des merveilles",
+    "realm_id": "alice_in_wonderland",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_003",
+    "name": "Anna",
+    "universe": "La Reine des neiges",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "La Reine des neiges",
+    "realm_id": "frozen",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_004",
+    "name": "Ariel",
+    "universe": "La Petite Sirène",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_005",
+    "name": "Belle",
+    "universe": "La Belle et la Bête",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "La Belle et la Bête",
+    "realm_id": "beauty_and_the_beast",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_006",
+    "name": "Buzz l'Éclair",
+    "universe": "Toy Story",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Toy Story",
+    "realm_id": "toy_story",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_007",
+    "name": "Chat du Cheshire",
+    "universe": "Alice au pays des merveilles",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Alice au pays des merveilles",
+    "realm_id": "alice_in_wonderland",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_008",
+    "name": "Cendrillon",
+    "universe": "Cendrillon",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_009",
+    "name": "Big Ben",
+    "universe": "La Belle et la Bête",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "La Belle et la Bête",
+    "realm_id": "beauty_and_the_beast",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_010",
+    "name": "La Bête",
+    "universe": "La Belle et la Bête",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "La Belle et la Bête",
+    "realm_id": "beauty_and_the_beast",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_011",
+    "name": "Marraine la bonne fée",
+    "universe": "Cendrillon",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_012",
+    "name": "Oublié",
+    "universe": "Personnage original",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_013",
+    "name": "Daisy",
+    "universe": "Mickey et ses amis",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_014",
+    "name": "Donald",
+    "universe": "Mickey et ses amis",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_015",
+    "name": "Dingo",
+    "universe": "Mickey et ses amis",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_016",
+    "name": "Elsa",
+    "universe": "La Reine des neiges",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "La Reine des neiges",
+    "realm_id": "frozen",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_017",
+    "name": "Hercule",
+    "universe": "Hercule",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Hercule",
+    "realm_id": "hercules",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_018",
+    "name": "Phil",
+    "universe": "Hercule",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Hercule",
+    "realm_id": "hercules",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_019",
+    "name": "Joie",
+    "universe": "Vice-versa",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Vice-versa",
+    "realm_id": "inside_out",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_020",
+    "name": "Tristesse",
+    "universe": "Vice-versa",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Vice-versa",
+    "realm_id": "inside_out",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_021",
+    "name": "Kristoff",
+    "universe": "La Reine des neiges",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "La Reine des neiges",
+    "realm_id": "frozen",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_022",
+    "name": "Lady",
+    "universe": "La Belle et le Clochard",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "La Belle et le Clochard",
+    "realm_id": "lady_and_the_tramp",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_023",
+    "name": "Clochard",
+    "universe": "La Belle et le Clochard",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "La Belle et le Clochard",
+    "realm_id": "lady_and_the_tramp",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_024",
+    "name": "Lumière",
+    "universe": "La Belle et la Bête",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "La Belle et la Bête",
+    "realm_id": "beauty_and_the_beast",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_025",
+    "name": "Maui",
+    "universe": "Vaiana",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Vaiana",
+    "realm_id": "moana",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_026",
+    "name": "Vaiana",
+    "universe": "Vaiana",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Vaiana",
+    "realm_id": "moana",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_027",
+    "name": "Merlin",
+    "universe": "Merlin l'Enchanteur",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_028",
+    "name": "Mickey",
+    "universe": "Mickey et ses amis",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_029",
+    "name": "Minnie",
+    "universe": "Mickey et ses amis",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_030",
+    "name": "Bob Razowski",
+    "universe": "Monstres et Cie",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Monstres et Cie",
+    "realm_id": "monsters_inc",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_031",
+    "name": "Sully",
+    "universe": "Monstres et Cie",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Monstres et Cie",
+    "realm_id": "monsters_inc",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_032",
+    "name": "Mulan",
+    "universe": "Mulan",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Mulan",
+    "realm_id": "mulan",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_033",
+    "name": "Mushu",
+    "universe": "Mulan",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Mulan",
+    "realm_id": "mulan",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_034",
+    "name": "Peter Pan",
+    "universe": "Peter Pan",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_035",
+    "name": "Pocahontas",
+    "universe": "Pocahontas",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_036",
+    "name": "Rémy",
+    "universe": "Ratatouille",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Ratatouille",
+    "realm_id": "ratatouille",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_037",
+    "name": "Mère Gothel",
+    "universe": "Raiponce",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_038",
+    "name": "Nala",
+    "universe": "Le Roi Lion",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Le Roi Lion",
+    "realm_id": "lion_king",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_039",
+    "name": "Pumbaa",
+    "universe": "Le Roi Lion",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Le Roi Lion",
+    "realm_id": "lion_king",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_040",
+    "name": "Scar",
+    "universe": "Le Roi Lion",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": "lion_king",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_041",
+    "name": "Simba",
+    "universe": "Le Roi Lion",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Le Roi Lion",
+    "realm_id": "lion_king",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_042",
+    "name": "Timon",
+    "universe": "Le Roi Lion",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Le Roi Lion",
+    "realm_id": "lion_king",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_043",
+    "name": "Prince Éric",
+    "universe": "La Petite Sirène",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_044",
+    "name": "Ursula",
+    "universe": "La Petite Sirène",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_045",
+    "name": "Tiana",
+    "universe": "La Princesse et la Grenouille",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_046",
+    "name": "Jack Skellington",
+    "universe": "L'Étrange Noël de monsieur Jack",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_047",
+    "name": "Oogie Boogie",
+    "universe": "L'Étrange Noël de monsieur Jack",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_048",
+    "name": "Sally",
+    "universe": "L'Étrange Noël de monsieur Jack",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_049",
+    "name": "Picsou",
+    "universe": "Mickey et ses amis",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_050",
+    "name": "Vanellope",
+    "universe": "Les Mondes de Ralph",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_051",
+    "name": "Ralph",
+    "universe": "Les Mondes de Ralph",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_052",
+    "name": "Stitch",
+    "universe": "Lilo et Stitch",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_053",
+    "name": "WALL-E",
+    "universe": "WALL-E",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "WALL-E",
+    "realm_id": "wall_e",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_054",
+    "name": "Woody",
+    "universe": "Toy Story",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Toy Story",
+    "realm_id": "toy_story",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_055",
+    "name": "Olaf",
+    "universe": "La Reine des neiges",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "La Reine des neiges",
+    "realm_id": "frozen",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_056",
+    "name": "Mirabel",
+    "universe": "Encanto",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": null,
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_057",
+    "name": "Jasmine",
+    "universe": "Aladdin",
+    "collection_area": "Dreamlight Valley",
+    "content_access": "base_game_or_free_update",
+    "required_pack": "Aladdin",
+    "realm_id": "aladdin",
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_058",
+    "name": "Jafar",
+    "universe": "Aladdin",
+    "collection_area": "Eternity Isle",
+    "content_access": "paid_content",
+    "required_pack": "A Rift in Time",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_059",
+    "name": "Gaston",
+    "universe": "La Belle et la Bête",
+    "collection_area": "Eternity Isle",
+    "content_access": "paid_content",
+    "required_pack": "A Rift in Time",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_060",
+    "name": "Oswald",
+    "universe": "Oswald le lapin chanceux",
+    "collection_area": "Eternity Isle",
+    "content_access": "paid_content",
+    "required_pack": "A Rift in Time",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_061",
+    "name": "Raiponce",
+    "universe": "Raiponce",
+    "collection_area": "Eternity Isle",
+    "content_access": "paid_content",
+    "required_pack": "A Rift in Time",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_062",
+    "name": "EVE",
+    "universe": "WALL-E",
+    "collection_area": "Eternity Isle",
+    "content_access": "paid_content",
+    "required_pack": "A Rift in Time",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_063",
+    "name": "Mérida",
+    "universe": "Rebelle",
+    "collection_area": "Storybook Vale",
+    "content_access": "paid_content",
+    "required_pack": "The Storybook Vale",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_064",
+    "name": "Hadès",
+    "universe": "Hercule",
+    "collection_area": "Storybook Vale",
+    "content_access": "paid_content",
+    "required_pack": "The Storybook Vale",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_065",
+    "name": "Aurore",
+    "universe": "La Belle au bois dormant",
+    "collection_area": "Storybook Vale",
+    "content_access": "paid_content",
+    "required_pack": "The Storybook Vale",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_066",
+    "name": "Maléfique",
+    "universe": "La Belle au bois dormant",
+    "collection_area": "Storybook Vale",
+    "content_access": "paid_content",
+    "required_pack": "The Storybook Vale",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_067",
+    "name": "Flynn Rider",
+    "universe": "Raiponce",
+    "collection_area": "Storybook Vale",
+    "content_access": "paid_content",
+    "required_pack": "The Storybook Vale",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_068",
+    "name": "Cruella",
+    "universe": "Les 101 Dalmatiens",
+    "collection_area": "Wishblossom Mountains",
+    "content_access": "paid_content",
+    "required_pack": "Wishblossom Ranch",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_069",
+    "name": "Clochette",
+    "universe": "Peter Pan",
+    "collection_area": "Wishblossom Mountains",
+    "content_access": "paid_content",
+    "required_pack": "Wishblossom Ranch",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_070",
+    "name": "Blanche-Neige",
+    "universe": "Blanche-Neige et les Sept Nains",
+    "collection_area": "Wishblossom Mountains",
+    "content_access": "paid_content",
+    "required_pack": "Wishblossom Ranch",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_071",
+    "name": "Tigrou",
+    "universe": "Winnie l'Ourson",
+    "collection_area": "Wishblossom Mountains",
+    "content_access": "paid_content",
+    "required_pack": "Wishblossom Ranch",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_072",
+    "name": "Winnie l'Ourson",
+    "universe": "Winnie l'Ourson",
+    "collection_area": "Honeyglow Woods",
+    "content_access": "paid_content",
+    "required_pack": "Honeyglow Woods Adventure Pack",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_073",
+    "name": "Porcinet",
+    "universe": "Winnie l'Ourson",
+    "collection_area": "Honeyglow Woods",
+    "content_access": "paid_content",
+    "required_pack": "Honeyglow Woods Adventure Pack",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_074",
+    "name": "Bourriquet",
+    "universe": "Winnie l'Ourson",
+    "collection_area": "Honeyglow Woods",
+    "content_access": "paid_content",
+    "required_pack": "Honeyglow Woods Adventure Pack",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_075",
+    "name": "Milo",
+    "universe": "Atlantide, l'empire perdu",
+    "collection_area": "The Keepsake Sea",
+    "content_access": "paid_content",
+    "required_pack": "The Keepsake Sea",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_076",
+    "name": "Mégara",
+    "universe": "Hercule",
+    "collection_area": "The Keepsake Sea",
+    "content_access": "paid_content",
+    "required_pack": "The Keepsake Sea",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_077",
+    "name": "Capitaine Crochet",
+    "universe": "Peter Pan",
+    "collection_area": "The Keepsake Sea",
+    "content_access": "paid_content",
+    "required_pack": "The Keepsake Sea",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_078",
+    "name": "Wendy",
+    "universe": "Peter Pan",
+    "collection_area": "The Keepsake Sea",
+    "content_access": "paid_content",
+    "required_pack": "The Keepsake Sea",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  },
+  {
+    "id": "character_079",
+    "name": "Capitaine Jack Sparrow",
+    "universe": "Pirates des Caraïbes",
+    "collection_area": "The Keepsake Sea",
+    "content_access": "paid_content",
+    "required_pack": "The Keepsake Sea",
+    "realm_id": null,
+    "origin_biome": null,
+    "unlock_summary": null,
+    "image": null,
+    "player_progress": {
+      "unlocked": false,
+      "friendship_level": 0,
+      "assigned_role": null,
+      "current_home_biome": null
+    }
+  }
+]
