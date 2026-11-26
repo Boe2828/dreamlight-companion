@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f3ea">
+<title>Dreamlight Companion</title>
+<style>
+:root {
+  --cream:#f8f3ea;
+  --pink:#c98f73;
+  --sage:#a8b5a2;
+  --brown:#75665d;
+  --blue:#25344d;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  background:var(--cream);
+  color:var(--brown);
+  font-family:Arial,sans-serif;
+}
+header {
+  padding:30px 22px;
+  background:var(--blue);
+  color:var(--cream);
+  border-radius:0 0 28px 28px;
+}
+header small {color:#d9c9b9}
+h1 {font-family:Georgia,serif;font-size:29px;margin:10px 0}
+header p {font-size:14px;line-height:1.5}
+main {padding:22px;max-width:650px;margin:auto}
+h2 {font-family:Georgia,serif;color:var(--blue)}
+.welcome {
+  background:white;padding:20px;border-radius:20px;
+  margin-bottom:24px;line-height:1.5;
+}
+.grid {
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;
+}
+.tile {
+  border:0;background:white;color:var(--brown);
+  border-radius:18px;padding:18px 12px;
+  text-align:left;min-height:115px;
+  box-shadow:0 3px 12px #75665d12;
+}
+.tile span {font-size:27px;display:block;margin-bottom:10px}
+.tile strong {font-size:15px}
+.tile small {display:block;margin-top:5px;color:#93877d}
+#content {
+  display:none;background:white;padding:20px;
+  border-radius:20px;margin-top:22px;line-height:1.6;
+}
+button.back {
+  border:0;background:var(--sage);color:#26352b;
+  padding:11px 16px;border-radius:12px;
+  margin-bottom:12px;font-weight:bold;
+}
+footer {text-align:center;padding:25px;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <small>✦ TON GUIDE MAGIQUE ✦</small>
+  <h1>Dreamlight Companion</h1>
+  <p>Ton petit compagnon pour explorer, collectionner et organiser ta vallée.</p>
+</header>
+<main>
+  <section id="home">
+    <div class="welcome">
+      ✨ <strong>Bienvenue dans ta vallée !</strong>
+      <br>Retrouve ici toutes les informations utiles pour ton aventure Disney Dreamlight Valley.
+    </div>
+    <h2>Mon encyclopédie</h2>
+    <div class="grid">
+      <button class="tile" onclick="openPage('Personnages')"><span>🧑‍🤝‍🧑</span><strong>Personnages</strong><small>Habitants et amitiés</small></button>
+      <button class="tile" onclick="openPage('Recettes')"><span>🍲</span><strong>Recettes</strong><small>Plats et ingrédients</small></button>
+      <button class="tile" onclick="openPage('Ressources')"><span>💎</span><strong>Ressources</strong><small>Récoltes et matériaux</small></button>
+      <button class="tile" onclick="openPage('Cultures')"><span>🌱</span><strong>Cultures</strong><small>Graines et plantations</small></button>
+      <button class="tile" onclick="openPage('Biomes')"><span>🌳</span><strong>Biomes</strong><small>Zones et déblocages</small></button>
+      <button class="tile" onclick="openPage('Artisanat')"><span>🛠️</span><strong>Artisanat</strong><small>Fabrications et objets</small></button>
+    </div>
+  </section>
+  <section id="content">
+    <button class="back" onclick="goHome()">← Retour</button>
+    <h2 id="pageTitle"></h2>
+    <p id="pageDescription"></p>
+    <p>✨ Cette rubrique accueillera bientôt sa liste complète, ses informations et tes cases à cocher.</p>
+  </section>
+</main>
+<footer>Fait avec douceur pour ta vallée ✦</footer>
+<script>
+const descriptions = {
+  Personnages:"Retrouve les habitants, leurs niveaux d'amitié, leurs rôles et leurs quêtes.",
+  Recettes:"Consulte les recettes, leurs ingrédients, leur valeur et tes collections.",
+  Ressources:"Découvre où trouver les fleurs, poissons, gemmes, bois et autres ressources.",
+  Cultures:"Compare les graines, les temps de pousse, les récoltes et les bénéfices.",
+  Biomes:"Explore les zones, leurs ressources et leurs conditions de déblocage.",
+  Artisanat:"Retrouve les objets à fabriquer et les matériaux nécessaires."
+};
+function openPage(name) {
+  document.getElementById("home").style.display="none";
+  document.getElementById("content").style.display="block";
+  document.getElementById("pageTitle").textContent=name;
+  document.getElementById("pageDescription").textContent=descriptions[name];
+  window.scrollTo(0,0);
+}
+function goHome() {
+  document.getElementById("content").style.display="none";
+  document.getElementById("home").style.display="block";
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
