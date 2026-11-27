@@ -38,7 +38,8 @@ tasks:[
 ],
 taskChecks:{},
 taskDate:new Date().toLocaleDateString('fr-CA'),
-characterProgress:{}
+characterProgress:{},
+goals:[]
 };
 
 let state=loadState(),
@@ -572,6 +573,147 @@ if(dx>75&&Math.abs(dx)>Math.abs(dy)*1.25){
 returnToCharacterList();
 }
 });
+
+function renderGoals(){
+const host=document.getElementById('goals-list');
+
+if(!state.goals)state.goals=[];
+
+host.innerHTML=`
+${state.goals.length
+?state.goals.map(g=>`
+<article class="goal-card ${g.done?'is-done':''}">
+  <div class="goal-card-heading">
+    <label class="goal-check">
+      <input type="checkbox" data-goal-check="${escapeHTML(g.id)}"
+        ${g.done?'checked':''}>
+      <span>${escapeHTML(g.title)}</span>
+    </label>
+    <button type="button" class="goal-expand"
+      data-goal-expand="${escapeHTML(g.id)}"
+      aria-label="Afficher les détails">⌄</button>
+  </div>
+
+  <div class="goal-details hidden" id="goal-details-${escapeHTML(g.id)}">
+    <p>${escapeHTML(g.details||'Aucun détail pour le moment.')}</p>
+    <div class="goal-actions">
+      <button type="button" data-goal-edit="${escapeHTML(g.id)}">Modifier</button>
+      <button type="button" data-goal-delete="${escapeHTML(g.id)}">Supprimer</button>
+    </div>
+  </div>
+</article>
+`).join('')
+:'<p class="muted">Aucun objectif pour le moment. Ajoute ton premier projet !</p>'}
+`;
+
+host.querySelectorAll('[data-goal-check]').forEach(el=>{
+el.onchange=()=>{
+const goal=state.goals.find(g=>g.id===el.dataset.goalCheck);
+if(!goal)return;
+goal.done=el.checked;
+saveState();
+renderGoals();
+};
+});
+
+host.querySelectorAll('[data-goal-expand]').forEach(el=>{
+el.onclick=()=>{
+const details=document.getElementById('goal-details-'+el.dataset.goalExpand);
+details.classList.toggle('hidden');
+el.textContent=details.classList.contains('hidden')?'⌄':'⌃';
+};
+});
+
+host.querySelectorAll('[data-goal-delete]').forEach(el=>{
+el.onclick=()=>{
+if(!confirm('Supprimer cet objectif ?'))return;
+state.goals=state.goals.filter(g=>g.id!==el.dataset.goalDelete);
+saveState();
+renderGoals();
+};
+});
+
+host.querySelectorAll('[data-goal-edit]').forEach(el=>{
+el.onclick=()=>{
+const goal=state.goals.find(g=>g.id===el.dataset.goalEdit);
+if(!goal)return;
+showGoalForm(goal);
+};
+});
+}
+
+function showGoalForm(goal=null){
+const host=document.getElementById('goals-list');
+
+const oldForm=document.getElementById('goal-form');
+if(oldForm)oldForm.remove();
+
+const form=document.createElement('form');
+form.id='goal-form';
+form.className='goal-form';
+
+form.innerHTML=`
+<label>
+Titre de l'objectif
+<input name="title" maxlength="70" required
+placeholder="Ex. : Débloquer un nouveau biome">
+</label>
+<label>
+Détails
+<textarea name="details" rows="3"
+placeholder="Les étapes, les idées ou les informations utiles…"></textarea>
+</label>
+<div class="goal-form-actions">
+<button type="submit" class="small-button">
+${goal?'Enregistrer':'Ajouter'}
+</button>
+<button type="button" class="goal-cancel">Annuler</button>
+</div>
+`;
+
+host.prepend(form);
+
+form.elements.title.value=goal?.title||'';
+form.elements.details.value=goal?.details||'';
+
+form.onsubmit=e=>{
+e.preventDefault();
+
+const title=form.elements.title.value.trim();
+const details=form.elements.details.value.trim();
+
+if(!title)return;
+
+if(goal){
+goal.title=title;
+goal.details=details;
+}else{
+state.goals.push({
+id:'goal-'+Date.now(),
+title,
+details,
+done:false
+});
+}
+
+saveState();
+renderGoals();
+};
+
+form.querySelector('.goal-cancel').onclick=renderGoals;
+
+form.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+document.getElementById('add-goal').addEventListener('click',()=>{
+const form=document.getElementById('goal-form');
+if(form){
+form.remove();
+return;
+}
+showGoalForm();
+});
+
 function renderTasks(){
 const host=document.getElementById('daily-tasks');
 
@@ -646,4 +788,5 @@ saveState();
 }
 
 renderTasks();
+renderGoals();
 loadCatalogs();
