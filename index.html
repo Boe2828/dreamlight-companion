@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -6,9 +7,10 @@
   <meta name="theme-color" content="#f8f3ea">
   <meta name="description" content="Ton compagnon personnel pour Disney Dreamlight Valley.">
   <title>Dreamlight Companion</title>
-  <link rel="stylesheet" href="style.css?v=20261127-3">
+  <link rel="stylesheet" href="style.css?v=20261127-4">
 </head>
 <body>
+
   <header class="hero">
     <div class="hero-shade"></div>
     <div class="hero-content">
@@ -19,41 +21,154 @@
   </header>
 
   <main class="page-shell">
-    <section class="progress-card panel" aria-label="Progression générale">
-      <div class="section-heading"><div><p class="eyebrow">MON AVENTURE</p><h2>Ma progression générale</h2></div><strong id="overall-percent">0 %</strong></div>
-      <div class="progress-track"><div id="overall-bar" class="progress-fill"></div></div>
-    </section>
 
-    <section class="quick-row">
-      <div class="currency panel"><span class="currency-icon">🪙</span><label for="star-coins">Pièces étoiles</label><input id="star-coins" type="number" min="0" inputmode="numeric" placeholder="Quantité"></div>
-      <div class="currency panel"><span class="currency-icon">✨</span><label for="dreamlight">Dreamlight</label><input id="dreamlight" type="number" min="0" inputmode="numeric" placeholder="Quantité"></div>
-    </section>
-
-    <section class="panel daily-panel">
-      <div class="section-heading"><div><p class="eyebrow">À TON RYTHME</p><h2>Mes petites tâches du jour</h2></div><button class="text-button" id="edit-tasks" type="button">Modifier</button></div>
-      <div id="daily-tasks" class="daily-list"></div>
-      <form id="new-task-form" class="inline-form hidden"><input id="new-task" maxlength="70" placeholder="Ajouter une tâche…" aria-label="Nouvelle tâche"><button class="small-button" type="submit">Ajouter</button></form>
-    </section>
-
-    <section class="panel notes-panel">
-      <div class="section-heading"><div><p class="eyebrow">MON PETIT CARNET</p><h2>Mes notes</h2></div><span class="note-mark">✎</span></div>
-      <textarea id="personal-notes" rows="3" placeholder="Une idée, un rappel, quelque chose à ne pas oublier…"></textarea>
-      <p class="save-hint" id="notes-status">Enregistrement automatique</p>
-    </section>
-
+    <!-- RECHERCHE GLOBALE -->
     <section class="catalog-section">
-      <div class="section-heading catalog-heading"><div><p class="eyebrow">TOUT POUR EXPLORER</p><h2>Mon encyclopédie</h2></div></div>
-      <label class="search-box"><span>⌕</span><input id="global-search" type="search" placeholder="Rechercher dans l'encyclopédie…" autocomplete="off"></label>
+      <label class="search-box">
+        <span>⌕</span>
+        <input id="global-search" type="search"
+          placeholder="Rechercher dans toute la vallée…"
+          autocomplete="off">
+      </label>
+    </section>
+
+    <!-- MA VALLÉE -->
+    <section class="panel valley-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MON AVENTURE</p>
+          <h2>Ma vallée</h2>
+        </div>
+        <span>✨</span>
+      </div>
+
+      <section class="progress-card" aria-label="Progression générale">
+        <div class="section-heading">
+          <h3>Ma progression générale</h3>
+          <strong id="overall-percent">0 %</strong>
+        </div>
+        <div class="progress-track">
+          <div id="overall-bar" class="progress-fill"></div>
+        </div>
+      </section>
+
+      <section class="quick-row">
+        <div class="currency">
+          <span class="currency-icon">🪙</span>
+          <label for="star-coins">Pièces étoiles</label>
+          <input id="star-coins" type="number" min="0"
+            inputmode="numeric" placeholder="Quantité">
+        </div>
+
+        <div class="currency">
+          <span class="currency-icon">✨</span>
+          <label for="dreamlight">Dreamlight</label>
+          <input id="dreamlight" type="number" min="0"
+            inputmode="numeric" placeholder="Quantité">
+        </div>
+      </section>
+
+      <details class="session-tracking">
+        <summary>Suivi de mes sessions de jeu</summary>
+        <div id="session-content">
+          <p class="muted">
+            Le suivi de tes soldes au début et à la fin de tes sessions
+            sera bientôt disponible ici.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <!-- MISSIONS ET OBJECTIFS -->
+    <section class="home-tools-grid">
+
+      <section class="panel daily-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">À TON RYTHME</p>
+            <h2>Mes missions du jour</h2>
+          </div>
+          <button class="text-button" id="edit-tasks" type="button">
+            Modifier
+          </button>
+        </div>
+
+        <div id="daily-tasks" class="daily-list"></div>
+
+        <form id="new-task-form" class="inline-form hidden">
+          <input id="new-task" maxlength="70"
+            placeholder="Ajouter une mission…"
+            aria-label="Nouvelle mission">
+          <button class="small-button" type="submit">Ajouter</button>
+        </form>
+      </section>
+
+      <section class="panel goals-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">MES PROJETS</p>
+            <h2>Mes objectifs</h2>
+          </div>
+          <span>☆</span>
+        </div>
+
+        <div id="goals-list">
+          <p class="muted">
+            Ton espace pour tes objectifs personnels arrive bientôt.
+          </p>
+        </div>
+
+        <button class="small-button" id="add-goal" type="button">
+          + Ajouter un objectif
+        </button>
+      </section>
+
+    </section>
+
+    <!-- NOTES CONSERVÉES TEMPORAIREMENT POUR PRÉSERVER LES DONNÉES -->
+    <div class="hidden" aria-hidden="true">
+      <textarea id="personal-notes"></textarea>
+      <p id="notes-status">Enregistrement automatique</p>
+    </div>
+
+    <!-- ENCYCLOPÉDIE -->
+    <section class="catalog-section">
+      <div class="section-heading catalog-heading">
+        <div>
+          <p class="eyebrow">TOUT POUR EXPLORER</p>
+          <h2>Mon encyclopédie</h2>
+        </div>
+      </div>
+
       <div id="category-grid" class="category-grid"></div>
     </section>
 
-    <section id="catalog-view" class="panel catalog-view hidden" aria-live="polite">
-      <div class="section-heading"><div><p class="eyebrow">MON ENCYCLOPÉDIE</p><h2 id="catalog-title">Catalogue</h2></div><button class="text-button" id="back-home" type="button">← Accueil</button></div>
+    <!-- CONTENU DES CATÉGORIES -->
+    <section id="catalog-view"
+      class="panel catalog-view hidden"
+      aria-live="polite">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MON ENCYCLOPÉDIE</p>
+          <h2 id="catalog-title">Catalogue</h2>
+        </div>
+        <button class="text-button" id="back-home" type="button">
+          ← Accueil
+        </button>
+      </div>
+
       <p id="catalog-description" class="muted"></p>
       <div id="catalog-items" class="catalog-items"></div>
     </section>
+
   </main>
 
-  <footer><span>Dreamlight Companion</span><span>Créé avec douceur pour ta vallée ✨</span></footer>
-<script src="app.js?v=20261127-4" defer></script></body>
+  <footer>
+    <span>Dreamlight Companion</span>
+    <span>Créé avec douceur pour ta vallée ✨</span>
+  </footer>
+
+  <script src="app.js?v=20261127-4" defer></script>
+</body>
 </html>
