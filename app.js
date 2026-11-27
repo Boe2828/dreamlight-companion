@@ -381,7 +381,9 @@ document.getElementById('catalog-title').textContent=c.name;
 document.getElementById('catalog-description').textContent=c.description;
 document.getElementById('catalog-view').classList.remove('hidden');
 
-id==='characters'?renderCharacters():renderGeneric(id);
+if(id==='characters')renderCharacters();
+else if(id==='recipes')renderRecipes();
+else renderGeneric(id);
 
 document.getElementById('catalog-view').scrollIntoView({
 behavior:'smooth',
