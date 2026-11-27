@@ -451,7 +451,7 @@ return true;
 function renderRecipes(){
 const host=document.getElementById('catalog-items');
 const list=filteredRecipes();
-const list=filteredRecipes();
+
 const ingredients=[...new Set(
 (catalogData.recipes||[]).flatMap(recipe=>
 (recipe.ingredients||[]).map(i=>i.name)
