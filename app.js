@@ -299,6 +299,7 @@ pct:a.length?Math.round(done/a.length*100):0
 }
 
 function renderCategories(q=''){
+  if(!document.getElementById('category-grid'))return;
 const grid=document.getElementById('category-grid');
 const s=(q||'').trim().toLocaleLowerCase('fr');
 
