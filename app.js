@@ -177,7 +177,7 @@ renderCategories(document.getElementById('global-search').value);
 async function loadCatalogs(){
 await Promise.all(CATEGORIES.map(async c=>{
 try{
-const r=await fetch('data/'+c.file);
+const r=await fetch('data/'+c.file+'?v=20261127-2',{cache:'no-store'});
 if(!r.ok)throw Error();
 const d=await r.json();
 catalogData[c.id]=Array.isArray(d)?d:[];
