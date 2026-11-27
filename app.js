@@ -721,7 +721,7 @@ document.getElementById('catalog-view').classList.add('hidden');
 });
 
 document.getElementById('explore-categories').addEventListener('click',()=>{
-document.querySelector('.catalog-section').scrollIntoView({
+document.getElementById('category-grid').scrollIntoView({
 behavior:'smooth',
 block:'start'
 });
