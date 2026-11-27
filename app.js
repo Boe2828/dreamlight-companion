@@ -513,13 +513,14 @@ renderRecipes();
 
 host.querySelector('#recipe-toggle-filters').onclick=()=>{
 recipeFilters.show=!recipeFilters.show;
-  const stars=host.querySelector('#recipe-stars');
+renderRecipes();
+};
+
+const stars=host.querySelector('#recipe-stars');
 stars.value=recipeFilters.stars;
 
 stars.onchange=()=>{
 recipeFilters.stars=stars.value;
-renderRecipes();
-};
 renderRecipes();
 };
   const category=host.querySelector('#recipe-category');
