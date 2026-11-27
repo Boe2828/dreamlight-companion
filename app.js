@@ -49,6 +49,30 @@ show:true
 };
 
 let characterListScrollY=0;
+
+function getPageScrollY(){
+return Math.max(
+window.pageYOffset || 0,
+document.documentElement.scrollTop || 0,
+document.body.scrollTop || 0
+);
+}
+
+function restorePageScrollY(){
+const html=document.documentElement;
+const previousBehavior=html.style.scrollBehavior;
+
+html.style.scrollBehavior='auto';
+
+requestAnimationFrame(()=>{
+window.scrollTo(0,characterListScrollY);
+
+requestAnimationFrame(()=>{
+window.scrollTo(0,characterListScrollY);
+html.style.scrollBehavior=previousBehavior;
+});
+});
+}
 let currentCharacterId=null;
 
 function loadState(){
@@ -168,7 +192,7 @@ const c=CATEGORIES.find(x=>x.id===id);
 if(!c)return;
 
 currentCharacterId=null;
-characterListScrollY=0;
+characterListScrollY=getPageScrollY();
 
 document.getElementById('catalog-title').textContent=c.name;
 document.getElementById('catalog-description').textContent=c.description;
@@ -399,13 +423,7 @@ openCharacter(b.dataset.character);
 });
 
 if(restoreScroll){
-requestAnimationFrame(()=>{
-window.scrollTo({
-top:characterListScrollY,
-behavior:'auto'
-});
-});
-}
+restorePageScrollY();
 }
 
 function returnToCharacterList(){
@@ -531,30 +549,27 @@ document.getElementById('global-search').addEventListener('input',e=>{
 renderCategories(e.target.value);
 });
 
-// Retour par glissement vers la droite sur une fiche personnage.
-const catalogItems=document.getElementById('catalog-items');
+// Retour par glissement horizontal sur une fiche personnage.
+let pointerStartX=0;
+let pointerStartY=0;
 
-let touchStartX=0;
-let touchStartY=0;
+document.addEventListener('pointerdown',e=>{
+if(!currentCharacterId||e.pointerType!=='touch')return;
 
-catalogItems.addEventListener('touchstart',e=>{
-if(!currentCharacterId||!e.changedTouches.length)return;
+pointerStartX=e.clientX;
+pointerStartY=e.clientY;
+});
 
-touchStartX=e.changedTouches[0].clientX;
-touchStartY=e.changedTouches[0].clientY;
-},{passive:true});
+document.addEventListener('pointerup',e=>{
+if(!currentCharacterId||e.pointerType!=='touch')return;
 
-catalogItems.addEventListener('touchend',e=>{
-if(!currentCharacterId||!e.changedTouches.length)return;
-
-const dx=e.changedTouches[0].clientX-touchStartX;
-const dy=e.changedTouches[0].clientY-touchStartY;
+const dx=e.clientX-pointerStartX;
+const dy=e.clientY-pointerStartY;
 
 if(dx>75&&Math.abs(dx)>Math.abs(dy)*1.25){
 returnToCharacterList();
 }
-},{passive:true});
-
+});
 function renderTasks(){
 const host=document.getElementById('daily-tasks');
 
