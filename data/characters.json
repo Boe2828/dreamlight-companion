@@ -48,7 +48,7 @@
   {"id":"character-047","name":"Peter Pan","universe":"Peter Pan","image":"assets/characters/Peter pan.jpeg..JPG","player_progress":{"unlocked":false,"friendship_level":0,"assigned_role":null,"current_home_biome":null}},
   {"id":"character-048","name":"Pocahontas","universe":"Pocahontas","image":"assets/characters/Pocahontas.jpeg..JPG","player_progress":{"unlocked":false,"friendship_level":0,"assigned_role":null,"current_home_biome":null}},
   {"id":"character-049","name":"Mère Gothel","universe":"Raiponce","image":"assets/characters/Meregothel.jpeg..JPG","player_progress":{"unlocked":false,"friendship_level":0,"assigned_role":null,"current_home_biome":null}},
-  {"id":"character-050","name":"Rémy","universe":"Ratatouille","image":"assets/characters/Rémi.jpeg..JPG","player_progress":{"unlocked":false,"friendship_level":0,"assigned_role":null,"current_home_biome":null}},
+  {"id":"character-050","name":"Rémy","universe":"Ratatouille","image":"assets/characters/Remi.jpeg..JPG","player_progress":{"unlocked":false,"friendship_level":0,"assigned_role":null,"current_home_biome":null}},
   {"id":"character-051","name":"Buzz l’Éclair","universe":"Toy Story","image":"assets/characters/Buzz.jpeg..JPG","player_progress":{"unlocked":false,"friendship_level":0,"assigned_role":null,"current_home_biome":null}},
   {"id":"character-052","name":"Woody","universe":"Toy Story","image":"assets/characters/Woody.jpeg..JPG","player_progress":{"unlocked":false,"friendship_level":0,"assigned_role":null,"current_home_biome":null}},
   {"id":"character-053","name":"Maui","universe":"Vaiana","image":"assets/characters/Maui.jpeg..JPG","player_progress":{"unlocked":false,"friendship_level":0,"assigned_role":null,"current_home_biome":null}},
