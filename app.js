@@ -29,6 +29,8 @@ function roleIcon(r){
 const defaultState={
 checks:{},
 currencies:{starCoins:'',dreamlight:''},
+sessions:[],
+activeSession:null,
 notes:'',
 tasks:[
 {id:'discussions',label:'Faire les discussions quotidiennes avec les personnages'},
