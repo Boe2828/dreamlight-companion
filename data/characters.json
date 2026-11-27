@@ -3,7 +3,7 @@
     "id": "character-001",
     "name": "Aladdin",
     "universe": "Aladdin",
-    "image": null,
+    "image": "assets/characters/aladdin.jpeg..jpg",
     "player_progress": {
       "unlocked": false,
       "friendship_level": 0,
