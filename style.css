@@ -622,3 +622,159 @@ footer {
     font-size: 13px;
   }
 }
+
+/* =========================================
+   MES OBJECTIFS
+   ========================================= */
+
+.goal-card {
+  margin: 9px 0;
+  padding: 11px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255,253,249,.9);
+}
+
+.goal-card.is-done {
+  background: #f1f4ee;
+  opacity: .8;
+}
+
+.goal-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.goal-check {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.goal-check input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  accent-color: var(--sage);
+}
+
+.goal-check span {
+  overflow-wrap: anywhere;
+}
+
+.goal-card.is-done .goal-check span {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.goal-expand {
+  flex: 0 0 27px;
+  width: 27px;
+  height: 27px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--rose);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.goal-details {
+  padding: 9px 2px 0 25px;
+}
+
+.goal-details p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.goal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.goal-actions button {
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--rose);
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Formulaire d'objectif */
+.goal-form {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 12px;
+  padding: 11px;
+  border: 1px solid rgba(168,181,162,.55);
+  border-radius: 12px;
+  background: #f8f6f0;
+}
+
+.goal-form label {
+  display: grid;
+  gap: 5px;
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.goal-form input,
+.goal-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fffdf9;
+  color: var(--navy);
+  font: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.goal-form textarea {
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.goal-form input:focus,
+.goal-form textarea:focus {
+  border-color: var(--sage);
+}
+
+.goal-form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.goal-form-actions button {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 5px;
+  font-size: 11px;
+}
+
+.goal-cancel {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  color: var(--ink);
+  font-weight: 700;
+}
