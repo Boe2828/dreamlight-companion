@@ -134,7 +134,6 @@ c.name.toLocaleLowerCase('fr').includes(s)||
 (catalogData[c.id]||[]).some(x=>
 (x.name||'').toLocaleLowerCase('fr').includes(s)
 )
-
 )
 .map(c=>{
 const z=categoryStats(c);
