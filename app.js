@@ -417,15 +417,14 @@ renderCharacters();
 
 host.querySelectorAll('[data-character]').forEach(b=>{
 b.onclick=()=>{
-characterListScrollY=window.scrollY;
-openCharacter(b.dataset.character);
+characterListScrollY=getPageScrollY();openCharacter(b.dataset.character);
 };
 });
 
 if(restoreScroll){
 restorePageScrollY();
 }
-
+}
 function returnToCharacterList(){
 currentCharacterId=null;
 renderCharacters(true);
