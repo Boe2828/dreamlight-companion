@@ -91,10 +91,15 @@ let currentCharacterId=null;
 function loadState(){
 try{
 const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
-const loaded={...defaultState,...saved};
+function saveState(){
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
 
-if((saved.tasksVersion||0)<2){
-const previousDefaultIds=['gift','shop','harvest','valley'];
+  try{
+    updateProgress();
+  }catch(error){
+    console.error('Erreur de mise à jour de la progression :',error);
+  }
+}
 const previousTasks=Array.isArray(saved.tasks)?saved.tasks:[];
 const previousById=Object.fromEntries(previousTasks.map(t=>[t.id,t]));
 
