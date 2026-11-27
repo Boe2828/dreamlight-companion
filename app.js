@@ -417,6 +417,35 @@ saveState();
 });
 }
 
+function filteredRecipes(){
+return (catalogData.recipes||[]).filter(recipe=>{
+const q=recipeFilters.search.toLocaleLowerCase('fr');
+
+if(q&&
+!(recipe.name||'').toLocaleLowerCase('fr').includes(q)&&
+!(recipe.ingredients||[]).some(i=>
+(i.name||'').toLocaleLowerCase('fr').includes(q)
+)
+)return false;
+
+if(recipeFilters.category!=='all'&&
+recipe.category!==recipeFilters.category)return false;
+
+if(recipeFilters.stars!=='all'&&
+String(recipe.stars)!==recipeFilters.stars)return false;
+
+if(recipeFilters.ingredient!=='all'&&
+!(recipe.ingredients||[]).some(i=>
+i.name===recipeFilters.ingredient
+))return false;
+
+if(recipeFilters.status==='discovered'&&!state.checks[recipe.id])return false;
+if(recipeFilters.status==='undiscovered'&&state.checks[recipe.id])return false;
+
+return true;
+});
+}
+
 function filteredCharacters(){
 return (catalogData.characters||[]).filter(ch=>{
 const p=progress(ch);
