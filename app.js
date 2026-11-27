@@ -164,15 +164,7 @@ function formatSessionGain(value){
   const sign=value>0?'+':'';
   return sign+value.toLocaleString('fr-FR');
 }  }catch(error){
-    console.error('Erreur de mise à jour de la progression :',error);
-  }
-}:`${remaining} min`;
-}
-
-function formatSessionGain(value){
-const sign=value>0?'+':'';
-return sign+value.toLocaleString('fr-FR');
-}
+    console.error('Erreur de mise à jour de la progression :',
 
 function renderSessions(){
 const startArea=document.getElementById('session-start-area');
