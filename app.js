@@ -88,12 +88,36 @@ let currentCharacterId=null;
 
 function loadState(){
 try{
-return {...defaultState,...JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}')};
+const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
+const loaded={...defaultState,...saved};
+
+if((saved.tasksVersion||0)<2){
+const previousDefaultIds=['gift','shop','harvest','valley'];
+const previousTasks=Array.isArray(saved.tasks)?saved.tasks:[];
+const previousById=Object.fromEntries(previousTasks.map(t=>[t.id,t]));
+
+const migratedDefaults=defaultState.tasks.map(task=>({
+...task,
+label:previousById[task.id]?.label||task.label
+}));
+
+const customTasks=previousTasks.filter(task=>
+!previousDefaultIds.includes(task.id)&&
+!migratedDefaults.some(defaultTask=>defaultTask.id===task.id)
+);
+
+loaded.tasks=[...migratedDefaults,...customTasks];
+loaded.tasksVersion=2;
+}
+
+if(!Array.isArray(loaded.tasks))loaded.tasks=structuredClone(defaultState.tasks);
+if(!loaded.taskChecks||typeof loaded.taskChecks!=='object')loaded.taskChecks={};
+
+return loaded;
 }catch{
 return structuredClone(defaultState);
 }
 }
-
 function saveState(){
 localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
 updateProgress();
