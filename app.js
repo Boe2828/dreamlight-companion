@@ -1,15 +1,11 @@
 const CATEGORIES = [
 {id:'characters',name:'Personnages',icon:'👑',file:'characters.json',description:'Tes personnages, leur amitié et leur rôle.'},
-{id:'recipes',name:'Recettes',icon:'🍲',file:'recipes.json',description:'Recettes, ingrédients, énergie et prix de vente.'},
-{id:'resources',name:'Ressources',icon:'💎',file:'resources.json',description:'Fleurs, gemmes, bois, poissons, fruits et autres ressources.'},
-{id:'crops',name:'Cultures',icon:'🌱',file:'crops.json',description:'Graines, prix, temps de pousse, récoltes et lieux de culture.'},
-{id:'biomes',name:'Biomes',icon:'🌳',file:'biomes.json',description:'Déblocage, améliorations, étals, habitants et ressources.'},
-{id:'realms',name:'Château & royaumes',icon:'🏰',file:'realms.json',description:'Portes du château, royaumes, personnages et éléments débloqués.'},
-{id:'crafting',name:'Artisanat',icon:'🛠️',file:'crafting.json',description:'Objets à fabriquer et matériaux nécessaires.'},
-{id:'collections',name:'Collections',icon:'👗',file:'collections.json',description:'Vêtements, accessoires, motifs, meubles et décorations obtenus.'},
-{id:'creatures',name:'Créatures',icon:'🐿️',file:'creatures.json',description:'Espèces, nourriture préférée, horaires et compagnons.'},
-{id:'quests',name:'Quêtes',icon:'📜',file:'quests.json',description:'Histoire principale, quêtes des personnages et devoirs permanents.'},
-{id:'currencies',name:'Dreamlight & monnaies',icon:'✨',file:'currencies.json',description:'À quoi servent les monnaies et comment les obtenir.'}
+{id:'recipes',name:'Recettes',icon:'🍲',file:'recipes.json',description:'Toutes les recettes du jeu, leurs ingrédients et leurs valeurs.'},
+{id:'resources',name:'Ressources & cultures',icon:'💎',file:'resources.json',description:'Toutes les ressources, les récoltes et les cultures.'},
+{id:'exploration',name:'Exploration',icon:'🌳',file:'biomes.json',description:'Les biomes, le château et les royaumes.'},
+{id:'crafting',name:'Artisanat',icon:'🛠️',file:'crafting.json',description:'Les objets à fabriquer et les matériaux nécessaires.'},
+{id:'creatures',name:'Créatures',icon:'🐿️',file:'creatures.json',description:'Les animaux, leur nourriture et les compagnons.'},
+{id:'chests',name:'Mes coffres',icon:'📦',file:'chests.json',description:'Organise tes coffres et suis tes réserves.'}
 ];
 
 const STORAGE_KEY='dreamlight-companion-v1';
