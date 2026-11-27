@@ -347,3 +347,14 @@
   max-height: 27px !important;
   object-fit: contain !important;
 }
+/* NOUVELLE BANNIÈRE */
+.hero {
+  min-height: 190px;
+  background: url('assets/banniere.PNG') center 45% / cover no-repeat;
+  color: #fff;
+}
+
+.hero-shade,
+.hero-content {
+  display: none !important;
+}
