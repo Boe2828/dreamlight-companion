@@ -351,7 +351,7 @@ try{
 const r=await fetch('data/'+c.file+'?v=20261127-2',{cache:'no-store'});
 if(!r.ok)throw Error();
 const d=await r.json();
-catalogData[c.id]=Array.isArray(d)?d:[];
+catalogData[c.id]=Array.isArray(d)?d:(Array.isArray(d.items)?d.items:[]);
 }catch{
 catalogData[c.id]=[];
 }
