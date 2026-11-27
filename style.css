@@ -787,12 +787,12 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 9px 10px;
+  padding: 7px 9px;
   border: 1px solid var(--line);
   border-radius: 10px;
   background: #fffaf5;
   color: var(--navy);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   cursor: pointer;
   list-style: none;
@@ -805,7 +805,7 @@ footer {
 #daily-details > summary::after {
   content: "+";
   color: var(--rose);
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1;
 }
 
