@@ -501,6 +501,13 @@ ${ingredients.map(ingredient=>`
 `).join('')}
 </select>
 </label>
+<label>Découverte
+<select id="recipe-status">
+<option value="all">Toutes les recettes</option>
+<option value="discovered">Découvertes</option>
+<option value="undiscovered">Non découvertes</option>
+</select>
+</label>
 </div>
 <p class="character-count">
 ${list.length} recette(s) affichée(s) sur
