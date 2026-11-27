@@ -121,8 +121,140 @@ return structuredClone(defaultState);
 }
 }
 function saveState(){
-localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
-updateProgress();
+function formatSessionDate(date){
+return new Date(date).toLocaleDateString('fr-FR',{
+day:'2-digit',
+month:'2-digit',
+year:'numeric'
+});
+}
+
+function formatSessionTime(date){
+return new Date(date).toLocaleTimeString('fr-FR',{
+hour:'2-digit',
+minute:'2-digit'
+});
+}
+
+function formatSessionDuration(start,end){
+const minutes=Math.max(0,Math.floor((new Date(end)-new Date(start))/60000));
+const hours=Math.floor(minutes/60);
+const remaining=minutes%60;
+
+return hours>0
+?`${hours} h ${remaining.toString().padStart(2,'0')} min`
+:`${remaining} min`;
+}
+
+function formatSessionGain(value){
+const sign=value>0?'+':'';
+return sign+value.toLocaleString('fr-FR');
+}
+
+function renderSessions(){
+const startArea=document.getElementById('session-start-area');
+const activeArea=document.getElementById('session-active-area');
+const historyArea=document.getElementById('session-history');
+
+if(!startArea||!activeArea||!historyArea)return;
+
+if(state.activeSession){
+const session=state.activeSession;
+
+startArea.classList.add('hidden');
+activeArea.classList.remove('hidden');
+
+activeArea.innerHTML=`
+<div class="session-active">
+<strong>Session en cours</strong>
+<p>Commencée le ${formatSessionDate(session.startedAt)}
+à ${formatSessionTime(session.startedAt)}</p>
+
+<p>Pièces étoiles au départ :
+<strong>${session.startCoins.toLocaleString('fr-FR')}</strong></p>
+
+<p>Dreamlight au départ :
+<strong>${session.startDreamlight.toLocaleString('fr-FR')}</strong></p>
+
+<form id="session-end-form" class="session-form">
+<label for="session-end-coins">Pièces étoiles à la fin</label>
+<input id="session-end-coins" type="number" min="0"
+inputmode="numeric" placeholder="Quantité" required>
+
+<label for="session-end-dreamlight">Dreamlight à la fin</label>
+<input id="session-end-dreamlight" type="number" min="0"
+inputmode="numeric" placeholder="Quantité" required>
+
+<button class="small-button" type="submit">
+Terminer la session
+</button>
+</form>
+</div>
+`;
+}else{
+startArea.classList.remove('hidden');
+activeArea.classList.add('hidden');
+activeArea.innerHTML='';
+}
+
+if(!state.sessions.length){
+historyArea.innerHTML=`
+<p class="muted">Aucune session enregistrée pour le moment.</p>
+`;
+return;
+}
+
+historyArea.innerHTML=`
+<div class="session-history">
+<h3>Historique des sessions</h3>
+
+${state.sessions.map(session=>`
+<div class="session-history-item">
+<strong>${formatSessionDate(session.startedAt)}</strong>
+
+<p>${formatSessionTime(session.startedAt)}
+– ${formatSessionTime(session.endedAt)}</p>
+
+<p>Durée : <strong>${formatSessionDuration(session.startedAt,session.endedAt)}</strong></p>
+
+<p>Pièces étoiles :
+<strong>${formatSessionGain(session.endCoins-session.startCoins)}</strong></p>
+
+<p>Dreamlight :
+<strong>${formatSessionGain(session.endDreamlight-session.startDreamlight)}</strong></p>
+</div>
+`).join('')}
+</div>
+`;
+}
+
+function startSession(coins,dreamlight){
+state.activeSession={
+id:Date.now(),
+startedAt:new Date().toISOString(),
+startCoins:coins,
+startDreamlight:dreamlight
+};
+
+saveState();
+renderSessions();
+}
+
+function endSession(coins,dreamlight){
+if(!state.activeSession)return;
+
+const session={
+...state.activeSession,
+endedAt:new Date().toISOString(),
+endCoins:coins,
+endDreamlight:dreamlight
+};
+
+state.sessions.unshift(session);
+state.activeSession=null;
+
+saveState();
+renderSessions();
 }
 
 function escapeHTML(v=''){
