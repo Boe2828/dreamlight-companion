@@ -543,6 +543,13 @@ stars.onchange=()=>{
 recipeFilters.stars=stars.value;
 renderRecipes();
 };
+  const status=host.querySelector('#recipe-status');
+status.value=recipeFilters.status;
+
+status.onchange=()=>{
+recipeFilters.status=status.value;
+renderRecipes();
+};
  const ingredient=host.querySelector('#recipe-ingredient');
 ingredient.value=recipeFilters.ingredient;
 
