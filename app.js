@@ -165,11 +165,12 @@ function formatSessionGain(value){
   return sign+value.toLocaleString('fr-FR');
 }
 
-function renderSessions(){const activeArea=document.getElementById('session-active-area');
-const historyArea=document.getElementById('session-history');
+function renderSessions(){
+  const startArea=document.getElementById('session-start-area');
+  const activeArea=document.getElementById('session-active-area');
+  const historyArea=document.getElementById('session-history');
 
-if(!startArea||!activeArea||!historyArea)return;
-
+  if(!startArea||!activeArea||!historyArea)return;
 if(state.activeSession){
 const session=state.activeSession;
 
