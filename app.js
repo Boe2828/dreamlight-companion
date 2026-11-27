@@ -744,16 +744,26 @@ return;
 showGoalForm();
 });
 
+let tasksEditing=false;
+
 function renderTasks(){
 const host=document.getElementById('daily-tasks');
 
 host.innerHTML=state.tasks.map(t=>`
+<div class="task-row-wrap">
 <label class="task-row ${state.taskChecks[t.id]?'done':''}">
 <input class="round-check" type="checkbox"
 data-task="${escapeHTML(t.id)}"
 ${state.taskChecks[t.id]?'checked':''}>
 <span>${escapeHTML(t.label)}</span>
 </label>
+${tasksEditing?`
+<div class="task-actions">
+<button type="button" data-edit-task="${escapeHTML(t.id)}">Renommer</button>
+<button type="button" data-delete-task="${escapeHTML(t.id)}">Supprimer</button>
+</div>
+`:''}
+</div>
 `).join('');
 
 host.querySelectorAll('[data-task]').forEach(el=>{
@@ -763,10 +773,46 @@ saveState();
 renderTasks();
 };
 });
+
+host.querySelectorAll('[data-edit-task]').forEach(el=>{
+el.onclick=()=>{
+const task=state.tasks.find(t=>t.id===el.dataset.editTask);
+if(!task)return;
+
+const label=prompt('Nouveau nom de la mission :',task.label);
+if(label===null)return;
+
+const newLabel=label.trim();
+if(!newLabel)return;
+
+task.label=newLabel;
+saveState();
+renderTasks();
+};
+});
+
+host.querySelectorAll('[data-delete-task]').forEach(el=>{
+el.onclick=()=>{
+const task=state.tasks.find(t=>t.id===el.dataset.deleteTask);
+if(!task)return;
+
+if(!confirm('Supprimer cette mission ?'))return;
+
+state.tasks=state.tasks.filter(t=>t.id!==task.id);
+delete state.taskChecks[task.id];
+saveState();
+renderTasks();
+};
+});
 }
 
 document.getElementById('edit-tasks').addEventListener('click',()=>{
-document.getElementById('new-task-form').classList.toggle('hidden');
+tasksEditing=!tasksEditing;
+
+document.getElementById('new-task-form').classList.toggle('hidden',!tasksEditing);
+document.getElementById('edit-tasks').textContent=tasksEditing?'Terminer':'Modifier';
+
+renderTasks();
 });
 
 document.getElementById('new-task-form').addEventListener('submit',e=>{
