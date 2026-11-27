@@ -71,11 +71,32 @@
       <details class="session-tracking">
         <summary>Suivi de mes sessions de jeu</summary>
         <div id="session-content">
-          <p class="muted">
-            Le suivi de tes soldes au début et à la fin de tes sessions
-            sera bientôt disponible ici.
-          </p>
-        </div>
+
+  <div id="session-start-area">
+    <p class="muted">
+      Enregistre tes soldes pour commencer une nouvelle session.
+    </p>
+
+    <form id="session-start-form" class="session-form">
+      <label for="session-start-coins">Pièces étoiles au départ</label>
+      <input id="session-start-coins" type="number" min="0"
+        inputmode="numeric" placeholder="Quantité" required>
+
+      <label for="session-start-dreamlight">Dreamlight au départ</label>
+      <input id="session-start-dreamlight" type="number" min="0"
+        inputmode="numeric" placeholder="Quantité" required>
+
+      <button class="small-button" type="submit">
+        Démarrer une session
+      </button>
+    </form>
+  </div>
+
+  <div id="session-active-area" class="hidden"></div>
+
+  <div id="session-history"></div>
+
+</div>
       </details>
     </section>
 
