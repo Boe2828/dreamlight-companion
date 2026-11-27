@@ -754,20 +754,27 @@ let pointerStartX=0;
 let pointerStartY=0;
 
 document.addEventListener('pointerdown',e=>{
-if(!currentCharacterId||e.pointerType!=='touch')return;
+if(e.pointerType!=='touch')return;
 
 pointerStartX=e.clientX;
 pointerStartY=e.clientY;
 });
 
 document.addEventListener('pointerup',e=>{
-if(!currentCharacterId||e.pointerType!=='touch')return;
+if(e.pointerType!=='touch')return;
 
 const dx=e.clientX-pointerStartX;
 const dy=e.clientY-pointerStartY;
 
-if(dx>75&&Math.abs(dx)>Math.abs(dy)*1.25){
+if(dx>90&&Math.abs(dx)>Math.abs(dy)*1.3){
+if(window.location.pathname.endsWith('categories.html')){
+window.location.href='index.html';
+return;
+}
+
+if(currentCharacterId){
 returnToCharacterList();
+}
 }
 });
 
