@@ -719,21 +719,35 @@ openCharacter(id);
 });
 }
 
-document.getElementById('back-home').addEventListener('click',()=>{
+const backHome=document.getElementById('back-home');
+
+if(backHome){
+backHome.addEventListener('click',()=>{
+if(window.location.pathname.endsWith('categories.html')){
+window.location.href='index.html';
+return;
+}
+
 currentCharacterId=null;
 document.getElementById('catalog-view').classList.add('hidden');
 });
+}
 
-document.getElementById('explore-categories').addEventListener('click',()=>{
-document.getElementById('category-grid').scrollIntoView({
-behavior:'smooth',
-block:'start'
-});
-});
+const explore=document.getElementById('explore-categories');
 
-document.getElementById('global-search').addEventListener('input',e=>{
+if(explore){
+explore.addEventListener('click',()=>{
+window.location.href='categories.html';
+});
+}
+
+const search=document.getElementById('global-search');
+
+if(search){
+search.addEventListener('input',e=>{
 renderCategories(e.target.value);
 });
+}
 
 // Retour par glissement horizontal sur une fiche personnage.
 let pointerStartX=0;
