@@ -82,26 +82,30 @@
     <!-- MISSIONS ET OBJECTIFS -->
     <section class="home-tools-grid">
 
-      <section class="panel daily-panel">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">À TON RYTHME</p>
-            <h2>Mes missions du jour</h2>
-          </div>
-          <button class="text-button" id="edit-tasks" type="button">
-            Modifier
-          </button>
-        </div>
+    <section class="panel daily-panel">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">À TON RYTHME</p>
+      <h2>Mes missions du jour</h2>
+    </div>
+    <button class="text-button" id="edit-tasks" type="button">
+      Modifier
+    </button>
+  </div>
 
-        <div id="daily-tasks" class="daily-list"></div>
+  <details id="daily-details" open>
+    <summary class="daily-toggle">Afficher les missions</summary>
 
-        <form id="new-task-form" class="inline-form hidden">
-          <input id="new-task" maxlength="70"
-            placeholder="Ajouter une mission…"
-            aria-label="Nouvelle mission">
-          <button class="small-button" type="submit">Ajouter</button>
-        </form>
-      </section>
+    <div id="daily-tasks" class="daily-list"></div>
+
+    <form id="new-task-form" class="inline-form hidden">
+      <input id="new-task" maxlength="70"
+        placeholder="Ajouter une mission…"
+        aria-label="Nouvelle mission">
+      <button class="small-button" type="submit">Ajouter</button>
+    </form>
+  </details>
+</section>
 
       <section class="panel goals-panel">
         <div class="section-heading">
