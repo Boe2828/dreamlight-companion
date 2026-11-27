@@ -467,9 +467,19 @@ value="${escapeHTML(recipeFilters.search)}">
 
 <div class="character-filters ${recipeFilters.show?'':'is-collapsed'}"
 id="recipe-filters">
-<p>Les filtres seront ajoutés ici.</p>
-</div>
 
+<label>Catégorie
+<select id="recipe-category">
+<option value="all">Toutes les catégories</option>
+<option value="Entrée">Entrées</option>
+<option value="Plat principal">Plats principaux</option>
+<option value="Dessert">Desserts</option>
+<option value="Boisson">Boissons</option>
+<option value="Potage">Potages</option>
+</select>
+</label>
+
+</div>
 <p class="character-count">
 ${list.length} recette(s) affichée(s) sur
 ${(catalogData.recipes||[]).length}
