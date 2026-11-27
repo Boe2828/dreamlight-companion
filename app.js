@@ -110,48 +110,52 @@ label:previousById[task.id]?.label||task.label
 
 const customTasks=previousTasks.filter(task=>
 !previousDefaultIds.includes(task.id)&&
-!migratedDefaults.some(defaultTask=>defaultTask.id===task.id)
-);
+!migratedDefaults.some(defaultTask=>defaultTask.id===function loadState(){
+  try{
+    const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
+    const loaded={...defaultState,...saved};
 
-loaded.tasks=[...migratedDefaults,...customTasks];
-loaded.tasksVersion=2;
+    if((saved.tasksVersion||0)<2){
+      const previousDefaultIds=['gift','shop','harvest','valley'];
+      const previousTasks=Array.isArray(saved.tasks)?saved.tasks:[];
+      const previousById=Object.fromEntries(previousTasks.map(t=>[t.id,t]));
+
+      const migratedDefaults=defaultState.tasks.map(task=>({
+        ...task,
+        label:previousById[task.id]?.label||task.label
+      }));
+
+      const customTasks=previousTasks.filter(task=>
+        !previousDefaultIds.includes(task.id)&&
+        !migratedDefaults.some(defaultTask=>defaultTask.id===task.id)
+      );
+
+      loaded.tasks=[...migratedDefaults,...customTasks];
+      loaded.tasksVersion=2;
+    }
+
+    if(!Array.isArray(loaded.tasks))loaded.tasks=structuredClone(defaultState.tasks);
+    if(!loaded.taskChecks||typeof loaded.taskChecks!=='object')loaded.taskChecks={};
+    if(!loaded.checks||typeof loaded.checks!=='object')loaded.checks={};
+    if(!loaded.characterProgress||typeof loaded.characterProgress!=='object')loaded.characterProgress={};
+    if(!Array.isArray(loaded.sessions))loaded.sessions=[];
+
+    return loaded;
+  }catch(error){
+    console.error('Erreur de chargement des données :',error);
+    return structuredClone(defaultState);
+  }
 }
 
-if(!Array.isArray(loaded.tasks))loaded.tasks=structuredClone(defaultState.tasks);
-if(!loaded.taskChecks||typeof loaded.taskChecks!=='object')loaded.taskChecks={};
-
-return loaded;
-}catch{
-return structuredClone(defaultState);
-}
-}
 function saveState(){
   localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
-updateProgress();
-}
-function formatSessionDate(date){
-return new Date(date).toLocaleDateString('fr-FR',{
-day:'2-digit',
-month:'2-digit',
-year:'numeric'
-});
-}
 
-function formatSessionTime(date){
-return new Date(date).toLocaleTimeString('fr-FR',{
-hour:'2-digit',
-minute:'2-digit'
-});
-}
-
-function formatSessionDuration(start,end){
-const minutes=Math.max(0,Math.floor((new Date(end)-new Date(start))/60000));
-const hours=Math.floor(minutes/60);
-const remaining=minutes%60;
-
-return hours>0
-?`${hours} h ${remaining.toString().padStart(2,'0')} min`
-:`${remaining} min`;
+  try{
+    updateProgress();
+  }catch(error){
+    console.error('Erreur de mise à jour de la progression :',error);
+  }
+}:`${remaining} min`;
 }
 
 function formatSessionGain(value){
