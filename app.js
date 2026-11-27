@@ -1,4 +1,4 @@
-il const CATEGORIES = [
+const CATEGORIES = [
 {id:'characters',name:'Personnages',icon:'👑',file:'characters.json',description:'Tes personnages, leur amitié et leur rôle.'},
 {id:'recipes',name:'Recettes',icon:'🍲',file:'recipes.json',description:'Recettes, ingrédients, énergie et prix de vente.'},
 {id:'resources',name:'Ressources',icon:'💎',file:'resources.json',description:'Fleurs, gemmes, bois, poissons, fruits et autres ressources.'},
@@ -86,91 +86,84 @@ html.style.scrollBehavior=previousBehavior;
 });
 });
 }
+
 let currentCharacterId=null;
 
 function loadState(){
-  try{
-    const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
-    const loaded={...defaultState,...saved};
+try{
+const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
+const loaded={...defaultState,...saved};
 
-    if((saved.tasksVersion||0)<2){
-      const previousDefaultIds=['gift','shop','harvest','valley'];
-      const previousTasks=Array.isArray(saved.tasks)?saved.tasks:[];
-      const previousById=Object.fromEntries(previousTasks.map(t=>[t.id,t]));
+if((saved.tasksVersion||0)<2){
+const previousDefaultIds=['gift','shop','harvest','valley'];
+const previousTasks=Array.isArray(saved.tasks)?saved.tasks:[];
+const previousById=Object.fromEntries(previousTasks.map(t=>[t.id,t]));
 
-      const migratedDefaults=defaultState.tasks.map(task=>({
-        ...task,
-        label:previousById[task.id]?.label||task.label
-      }));
+const migratedDefaults=defaultState.tasks.map(task=>({
+...task,
+label:previousById[task.id]?.label||task.label
+}));
 
-      const customTasks=previousTasks.filter(task=>
-        !previousDefaultIds.includes(task.id)&&
-        !migratedDefaults.some(defaultTask=>defaultTask.id===task.id)
-      );
+const customTasks=previousTasks.filter(task=>
+!previousDefaultIds.includes(task.id)&&
+!migratedDefaults.some(defaultTask=>defaultTask.id===task.id)
+);
 
-      loaded.tasks=[...migratedDefaults,...customTasks];
-      loaded.tasksVersion=2;
-    }
+loaded.tasks=[...migratedDefaults,...customTasks];
+loaded.tasksVersion=2;
+}
 
-    if(!Array.isArray(loaded.tasks))loaded.tasks=structuredClone(defaultState.tasks);
-    if(!loaded.taskChecks||typeof loaded.taskChecks!=='object')loaded.taskChecks={};
-    if(!loaded.checks||typeof loaded.checks!=='object')loaded.checks={};
-    if(!loaded.characterProgress||typeof loaded.characterProgress!=='object')loaded.characterProgress={};
-    if(!Array.isArray(loaded.sessions))loaded.sessions=[];
+if(!Array.isArray(loaded.tasks))loaded.tasks=structuredClone(defaultState.tasks);
+if(!loaded.taskChecks||typeof loaded.taskChecks!=='object')loaded.taskChecks={};
 
-    return loaded;
-  }catch(error){
-    console.error('Erreur de chargement des données :',error);
-    return structuredClone(defaultState);
-  }
+return loaded;
+}catch{
+return structuredClone(defaultState);
+}
 }
 
 function saveState(){
-  localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
-
-  try{
-    updateProgress();
-  }catch(error){
-    console.error('Erreur de mise à jour de la progression :',error);
-  }
+localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+updateProgress();
 }
 
 function formatSessionDate(date){
-  return new Date(date).toLocaleDateString('fr-FR',{
-    day:'2-digit',
-    month:'2-digit',
-    year:'numeric'
-  });
+return new Date(date).toLocaleDateString('fr-FR',{
+day:'2-digit',
+month:'2-digit',
+year:'numeric'
+});
 }
 
 function formatSessionTime(date){
-  return new Date(date).toLocaleTimeString('fr-FR',{
-    hour:'2-digit',
-    minute:'2-digit'
-  });
+return new Date(date).toLocaleTimeString('fr-FR',{
+hour:'2-digit',
+minute:'2-digit'
+});
 }
 
 function formatSessionDuration(start,end){
-  const minutes=Math.max(0,Math.floor((new Date(end)-new Date(start))/60000));
-  const hours=Math.floor(minutes/60);
-  const remaining=minutes%60;
+const minutes=Math.max(0,Math.floor((new Date(end)-new Date(start))/60000));
+const hours=Math.floor(minutes/60);
+const remaining=minutes%60;
 
-  return hours>0
-    ?`${hours} h ${remaining.toString().padStart(2,'0')} min`
-    :`${remaining} min`;
+return hours>0
+?`${hours} h ${remaining.toString().padStart(2,'0')} min`
+:`${remaining} min`;
 }
 
 function formatSessionGain(value){
-  const sign=value>0?'+':'';
-  return sign+value.toLocaleString('fr-FR');
+const sign=value>0?'+':'';
+return sign+value.toLocaleString('fr-FR');
 }
 
 function renderSessions(){
-  const startArea=document.getElementById('session-start-area');
-  const activeArea=document.getElementById('session-active-area');
-  const historyArea=document.getElementById('session-history');
+const startArea=document.getElementById('session-start-area');
+const activeArea=document.getElementById('session-active-area');
+const historyArea=document.getElementById('session-history');
 
-  if(!startArea||!activeArea||!historyArea)return;
+if(!startArea||!activeArea||!historyArea)return;
+
 if(state.activeSession){
 const session=state.activeSession;
 
@@ -598,7 +591,8 @@ renderCharacters();
 
 host.querySelectorAll('[data-character]').forEach(b=>{
 b.onclick=()=>{
-characterListScrollY=getPageScrollY();openCharacter(b.dataset.character);
+characterListScrollY=getPageScrollY();
+openCharacter(b.dataset.character);
 };
 });
 
@@ -606,6 +600,7 @@ if(restoreScroll){
 restorePageScrollY();
 }
 }
+
 function returnToCharacterList(){
 currentCharacterId=null;
 renderCharacters(true);
@@ -992,6 +987,7 @@ state.currencies[key]=el.value;
 saveState();
 });
 }
+
 document.getElementById('session-start-form').addEventListener('submit',e=>{
 e.preventDefault();
 
@@ -1002,8 +998,10 @@ if(!Number.isFinite(coins)||!Number.isFinite(dreamlight))return;
 
 startSession(coins,dreamlight);
 });
+
 document.getElementById('session-content').addEventListener('submit',e=>{
 if(e.target.id!=='session-end-form')return;
+
 e.preventDefault();
 
 const coins=Number(document.getElementById('session-end-coins').value);
@@ -1013,6 +1011,7 @@ if(!Number.isFinite(coins)||!Number.isFinite(dreamlight))return;
 
 endSession(coins,dreamlight);
 });
+
 const notes=document.getElementById('personal-notes');
 notes.value=state.notes||'';
 
