@@ -58,7 +58,7 @@ unlocked:'all',
 friendship:'all',
 role:'all',
 biome:'all',
-show:true
+show:false
 };
 
 let characterListScrollY=0;
