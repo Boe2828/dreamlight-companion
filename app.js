@@ -909,6 +909,7 @@ form.querySelector('.goal-cancel').onclick=renderGoals;
 form.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
+if(document.getElementById('add-goal')){
 document.getElementById('add-goal').addEventListener('click',()=>{
 const form=document.getElementById('goal-form');
 if(form){
@@ -1064,4 +1065,5 @@ saveState();
 renderTasks();
 renderGoals();
 renderSessions();
+}
 loadCatalogs();
