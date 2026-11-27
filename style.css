@@ -778,3 +778,41 @@ footer {
   color: var(--ink);
   font-weight: 700;
 }
+/* Dépliage des missions du jour */
+#daily-details {
+  margin-top: 10px;
+}
+
+#daily-details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fffaf5;
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+#daily-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+#daily-details > summary::after {
+  content: "+";
+  color: var(--rose);
+  font-size: 18px;
+  line-height: 1;
+}
+
+#daily-details[open] > summary::after {
+  content: "−";
+}
+
+#daily-details .daily-list {
+  padding-top: 12px;
+}
