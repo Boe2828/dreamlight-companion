@@ -314,7 +314,7 @@ ${Array.from({length:11},(_,i)=>
 <select id="f-role">
 <option value="all">Tous les rôles</option>
 ${ROLES.map(r=>
-`<option value="${r.id}">${r.icon} ${r.label}</option>`
+`<option value="${r.id}">${r.label}</option>`
 ).join('')}
 </select>
 </label>
@@ -364,7 +364,7 @@ Amitié ${p.friendship_level}/10
 </span>
 
 <span class="character-role">
-${r?r.icon+' '+r.label:'Rôle non attribué'}
+${r?`${roleIcon(r)}<small>${r.label}</small>`:'Rôle non attribué'}
 </span>
 
 </button>`;
@@ -493,7 +493,7 @@ aria-label="Niveau ${i}">${i}</button>
 ${ROLES.map(r=>`
 <button data-role="${r.id}"
 class="${p.assigned_role===r.id?'selected':''}">
-<span>${r.icon}</span>
+<span class="role-icon">${roleIcon(r)}</span>
 <small>${r.label}</small>
 </button>
 `).join('')}
