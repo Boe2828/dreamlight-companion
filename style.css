@@ -547,7 +547,7 @@
   line-height: 1.5;
 }
 
-.goals-panel > .small-button {
+.goals-panel .small-button {
   width: 100%;
   margin-top: 13px;
   padding: 9px 6px;
