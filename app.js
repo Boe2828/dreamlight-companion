@@ -720,6 +720,13 @@ currentCharacterId=null;
 document.getElementById('catalog-view').classList.add('hidden');
 });
 
+document.getElementById('explore-categories').addEventListener('click',()=>{
+document.querySelector('.catalog-section').scrollIntoView({
+behavior:'smooth',
+block:'start'
+});
+});
+
 document.getElementById('global-search').addEventListener('input',e=>{
 renderCategories(e.target.value);
 });
