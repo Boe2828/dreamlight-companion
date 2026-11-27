@@ -162,9 +162,10 @@ function formatSessionDuration(start,end){
 
 function formatSessionGain(value){
   const sign=value>0?'+':'';
-  return sign+value.toLocaleString('fr-function renderSessions(){
-const startArea=document.getElementById('session-start-area');
-const activeArea=document.getElementById('session-active-area');
+  return sign+value.toLocaleString('fr-FR');
+}
+
+function renderSessions(){const activeArea=document.getElementById('session-active-area');
 const historyArea=document.getElementById('session-history');
 
 if(!startArea||!activeArea||!historyArea)return;
