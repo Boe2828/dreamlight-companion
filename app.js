@@ -478,7 +478,16 @@ id="recipe-filters">
 <option value="Potage">Potages</option>
 </select>
 </label>
-
+<label>Nombre d'étoiles
+<select id="recipe-stars">
+<option value="all">Toutes les recettes</option>
+<option value="1">1 étoile</option>
+<option value="2">2 étoiles</option>
+<option value="3">3 étoiles</option>
+<option value="4">4 étoiles</option>
+<option value="5">5 étoiles</option>
+</select>
+</label>
 </div>
 <p class="character-count">
 ${list.length} recette(s) affichée(s) sur
