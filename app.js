@@ -448,6 +448,56 @@ return true;
 });
 }
 
+function renderRecipes(){
+const host=document.getElementById('catalog-items');
+const list=filteredRecipes();
+
+host.innerHTML=`
+<div class="character-toolbar">
+<label class="character-search">
+⌕
+<input id="recipe-search" type="search"
+placeholder="Rechercher une recette ou un ingrédient…"
+value="${escapeHTML(recipeFilters.search)}">
+</label>
+<button class="character-filter-toggle" id="recipe-toggle-filters">
+⚙ Filtres
+</button>
+</div>
+
+<div class="character-filters ${recipeFilters.show?'':'is-collapsed'}"
+id="recipe-filters">
+<p>Les filtres seront ajoutés ici.</p>
+</div>
+
+<p class="character-count">
+${list.length} recette(s) affichée(s) sur
+${(catalogData.recipes||[]).length}
+</p>
+
+<div class="recipe-grid">
+${list.length
+?list.map(recipe=>`
+<div class="recipe-card">
+<strong>${escapeHTML(recipe.name||'Recette sans nom')}</strong>
+</div>
+`).join('')
+:'<p class="muted">Aucune recette à afficher pour le moment.</p>'}
+</div>
+`;
+
+const search=host.querySelector('#recipe-search');
+search.oninput=()=>{
+recipeFilters.search=search.value;
+renderRecipes();
+};
+
+host.querySelector('#recipe-toggle-filters').onclick=()=>{
+recipeFilters.show=!recipeFilters.show;
+renderRecipes();
+};
+}
+
 function filteredCharacters(){
 return (catalogData.characters||[]).filter(ch=>{
 const p=progress(ch);
