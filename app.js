@@ -121,6 +121,9 @@ return structuredClone(defaultState);
 }
 }
 function saveState(){
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+updateProgress();
+}
 function formatSessionDate(date){
 return new Date(date).toLocaleDateString('fr-FR',{
 day:'2-digit',
