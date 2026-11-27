@@ -57,6 +57,15 @@ biome:'all',
 show:false
 };
 
+let recipeFilters={
+search:'',
+category:'all',
+stars:'all',
+ingredient:'all',
+status:'all',
+show:false
+};
+
 let characterListScrollY=0;
 
 function getPageScrollY(){
