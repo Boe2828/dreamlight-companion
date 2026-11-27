@@ -23,7 +23,7 @@ const ROLES=[
 ];
 
 function roleIcon(r){
-return `<img src="${r.image}" alt="${r.label}">`;
+  return `<img src="${r.image}" alt="${r.label}" style="display:block;width:46px;height:46px;max-width:46px;max-height:46px;object-fit:contain;">`;
 }
 
 const defaultState={
