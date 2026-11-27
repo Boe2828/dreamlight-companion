@@ -1,4 +1,4 @@
-const CATEGORIES = [
+il const CATEGORIES = [
 {id:'characters',name:'Personnages',icon:'👑',file:'characters.json',description:'Tes personnages, leur amitié et leur rôle.'},
 {id:'recipes',name:'Recettes',icon:'🍲',file:'recipes.json',description:'Recettes, ingrédients, énergie et prix de vente.'},
 {id:'resources',name:'Ressources',icon:'💎',file:'resources.json',description:'Fleurs, gemmes, bois, poissons, fruits et autres ressources.'},
@@ -991,6 +991,17 @@ const dreamlight=Number(document.getElementById('session-start-dreamlight').valu
 if(!Number.isFinite(coins)||!Number.isFinite(dreamlight))return;
 
 startSession(coins,dreamlight);
+});
+document.getElementById('session-content').addEventListener('submit',e=>{
+if(e.target.id!=='session-end-form')return;
+e.preventDefault();
+
+const coins=Number(document.getElementById('session-end-coins').value);
+const dreamlight=Number(document.getElementById('session-end-dreamlight').value);
+
+if(!Number.isFinite(coins)||!Number.isFinite(dreamlight))return;
+
+endSession(coins,dreamlight);
 });
 const notes=document.getElementById('personal-notes');
 notes.value=state.notes||'';
