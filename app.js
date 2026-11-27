@@ -340,10 +340,13 @@ const all=CATEGORIES.flatMap(c=>
 const done=all.filter(x=>isComplete(x.item,x.cat)).length;
 const p=all.length?Math.round(done/all.length*100):0;
 
-document.getElementById('overall-percent').textContent=p+' %';
-document.getElementById('overall-bar').style.width=p+'%';
+const percent=document.getElementById('overall-percent');
+const bar=document.getElementById('overall-bar');
 
-renderCategories(document.getElementById('global-search').value);
+if(percent)percent.textContent=p+' %';
+if(bar)bar.style.width=p+'%';
+const search=document.getElementById('global-search');
+if(search)renderCategories(search.value);
 }
 
 async function loadCatalogs(){
