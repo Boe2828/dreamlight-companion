@@ -489,8 +489,12 @@ id="recipe-filters">
 <option value="1">1 étoile</option>
 <option value="2">2 étoiles</option>
 <option value="3">3 étoiles</option>
-<option value="4">4 étoiles</option>
-<option value="5">5 étoiles</option>
+<label>Ingrédient
+<select id="recipe-ingredient">
+<option value="all">Tous les ingrédients</option>
+${ingredients.map(ingredient=>`
+<option value="${escapeHTML(ingredient)}">${escapeHTML(ingredient)}</option>
+`).join('')}
 </select>
 </label>
 <label>Ingrédient
