@@ -319,3 +319,31 @@
   min-width: 76px;
   padding: 8px 6px;
 }
+/* Correction taille des icônes de rôles */
+
+.role-choices .role-icon {
+  display: flex !important;
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  max-width: 46px !important;
+  flex: 0 0 46px !important;
+  overflow: hidden;
+}
+
+.role-choices .role-icon img {
+  display: block !important;
+  width: 46px !important;
+  height: 46px !important;
+  max-width: 46px !important;
+  max-height: 46px !important;
+  object-fit: contain !important;
+}
+
+.character-role img {
+  width: 27px !important;
+  height: 27px !important;
+  max-width: 27px !important;
+  max-height: 27px !important;
+  object-fit: contain !important;
+}
