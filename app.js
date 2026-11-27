@@ -536,6 +536,13 @@ stars.onchange=()=>{
 recipeFilters.stars=stars.value;
 renderRecipes();
 };
+ const ingredient=host.querySelector('#recipe-ingredient');
+ingredient.value=recipeFilters.ingredient;
+
+ingredient.onchange=()=>{
+recipeFilters.ingredient=ingredient.value;
+renderRecipes();
+};
   const category=host.querySelector('#recipe-category');
 category.value=recipeFilters.category;
 
