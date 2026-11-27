@@ -946,3 +946,17 @@ footer {
 .hidden {
   display: none !important;
 }
+/* Correction affichage mobile du catalogue */
+#catalog-view,
+#catalog-items,
+.character-toolbar,
+.character-filters,
+.character-grid {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.character-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
