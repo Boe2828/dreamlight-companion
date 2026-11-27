@@ -15,12 +15,16 @@ const CATEGORIES = [
 const STORAGE_KEY='dreamlight-companion-v1';
 
 const ROLES=[
-{id:'jardinage',label:'Jardinage',icon:'🌱'},
-{id:'minage',label:'Extraction',icon:'⛏️'},
-{id:'peche',label:'Pêche',icon:'🎣'},
-{id:'recolte',label:'Cueillette',icon:'🌸'},
-{id:'creusage',label:'Excavation',icon:'🪏'}
+{id:'jardinage',label:'Jardinage',image:'assets/roles/jardinage.png'},
+{id:'minage',label:'Extraction',image:'assets/roles/extraction.png'},
+{id:'peche',label:'Pêche',image:'assets/roles/peche.png'},
+{id:'recolte',label:'Cueillette',image:'assets/roles/cueillette.png'},
+{id:'creusage',label:'Excavation',image:'assets/roles/excavation.png'}
 ];
+
+function roleIcon(r){
+return `<img src="${r.image}" alt="${r.label}">`;
+}
 
 const defaultState={
 checks:{},
