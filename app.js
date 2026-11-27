@@ -89,28 +89,6 @@ html.style.scrollBehavior=previousBehavior;
 let currentCharacterId=null;
 
 function loadState(){
-try{
-const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
-function saveState(){
-  localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
-
-  try{
-    updateProgress();
-  }catch(error){
-    console.error('Erreur de mise à jour de la progression :',error);
-  }
-}
-const previousTasks=Array.isArray(saved.tasks)?saved.tasks:[];
-const previousById=Object.fromEntries(previousTasks.map(t=>[t.id,t]));
-
-const migratedDefaults=defaultState.tasks.map(task=>({
-...task,
-label:previousById[task.id]?.label||task.label
-}));
-
-const customTasks=previousTasks.filter(task=>
-!previousDefaultIds.includes(task.id)&&
-!migratedDefaults.some(defaultTask=>defaultTask.id===function loadState(){
   try{
     const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
     const loaded={...defaultState,...saved};
@@ -153,6 +131,39 @@ function saveState(){
   try{
     updateProgress();
   }catch(error){
+    console.error('Erreur de mise à jour de la progression :',error);
+  }
+}
+
+function formatSessionDate(date){
+  return new Date(date).toLocaleDateString('fr-FR',{
+    day:'2-digit',
+    month:'2-digit',
+    year:'numeric'
+  });
+}
+
+function formatSessionTime(date){
+  return new Date(date).toLocaleTimeString('fr-FR',{
+    hour:'2-digit',
+    minute:'2-digit'
+  });
+}
+
+function formatSessionDuration(start,end){
+  const minutes=Math.max(0,Math.floor((new Date(end)-new Date(start))/60000));
+  const hours=Math.floor(minutes/60);
+  const remaining=minutes%60;
+
+  return hours>0
+    ?`${hours} h ${remaining.toString().padStart(2,'0')} min`
+    :`${remaining} min`;
+}
+
+function formatSessionGain(value){
+  const sign=value>0?'+':'';
+  return sign+value.toLocaleString('fr-FR');
+}  }catch(error){
     console.error('Erreur de mise à jour de la progression :',error);
   }
 }:`${remaining} min`;
