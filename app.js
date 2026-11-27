@@ -982,7 +982,16 @@ state.currencies[key]=el.value;
 saveState();
 });
 }
+document.getElementById('session-start-form').addEventListener('submit',e=>{
+e.preventDefault();
 
+const coins=Number(document.getElementById('session-start-coins').value);
+const dreamlight=Number(document.getElementById('session-start-dreamlight').value);
+
+if(!Number.isFinite(coins)||!Number.isFinite(dreamlight))return;
+
+startSession(coins,dreamlight);
+});
 const notes=document.getElementById('personal-notes');
 notes.value=state.notes||'';
 
