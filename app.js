@@ -569,7 +569,6 @@ category.onchange=()=>{
 recipeFilters.category=category.value;
 renderRecipes();
 };
-}
 host.querySelectorAll('[data-check]').forEach(el=>{
 el.onchange=()=>{
 state.checks[el.dataset.check]=el.checked;
@@ -577,6 +576,7 @@ saveState();
 renderRecipes();
 };
 });
+}
 function filteredCharacters(){
 return (catalogData.characters||[]).filter(ch=>{
 const p=progress(ch);
