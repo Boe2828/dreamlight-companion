@@ -488,6 +488,11 @@ id="recipe-filters">
 <option value="5">5 étoiles</option>
 </select>
 </label>
+<label>Ingrédient
+<select id="recipe-ingredient">
+<option value="all">Tous les ingrédients</option>
+</select>
+</label>
 </div>
 <p class="character-count">
 ${list.length} recette(s) affichée(s) sur
