@@ -519,6 +519,11 @@ ${list.length
 ?list.map(recipe=>`
 <div class="recipe-card">
 <strong>${escapeHTML(recipe.name||'Recette sans nom')}</strong>
+<label>
+<input type="checkbox" data-check="${escapeHTML(recipe.id)}"
+${state.checks[recipe.id]?'checked':''}>
+Recette découverte
+</label>
 </div>
 `).join('')
 :'<p class="muted">Aucune recette à afficher pour le moment.</p>'}
