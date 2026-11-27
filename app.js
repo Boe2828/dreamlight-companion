@@ -11,7 +11,7 @@ const CATEGORIES = [
 {id:'quests',name:'Quêtes',icon:'📜',file:'quests.json',description:'Histoire principale, quêtes des personnages et devoirs permanents.'},
 {id:'currencies',name:'Dreamlight & monnaies',icon:'✨',file:'currencies.json',description:'À quoi servent les monnaies et comment les obtenir.'}];
 const STORAGE_KEY='dreamlight-companion-v1';
-const ROLES=[{id:'jardinage',label:'Jardinage',icon:'🌱'},{id:'minage',label:'Minage',icon:'⛏️'},{id:'peche',label:'Pêche',icon:'🎣'},{id:'recolte',label:'Récolte',icon:'🌸'},{id:'creusage',label:'Creusage',icon:'🪏'}];
+const ROLES=[{id:'jardinage',label:'Jardinage',icon:'🌱'},{id:'minage',label:'Extraction',icon:'⛏️'},{id:'peche',label:'Pêche',icon:'🎣'},{id:'recolte',label:'Cueillette',icon:'🌸'},{id:'creusage',label:'Excavation',icon:'🪏'}];;
 const defaultState={checks:{},currencies:{starCoins:'',dreamlight:''},notes:'',tasks:[{id:'gift',label:'Offrir les cadeaux préférés'},{id:'shop',label:'Faire un tour à la boutique de Picsou'},{id:'harvest',label:'Vérifier mes récoltes'},{id:'valley',label:'Faire un petit tour dans la vallée'}],taskChecks:{},taskDate:new Date().toLocaleDateString('fr-CA'),characterProgress:{}};
 let state=loadState(),catalogData={},filters={search:'',unlocked:'all',friendship:'all',role:'all',biome:'all',show:true};
 function loadState(){try{return {...defaultState,...JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}')}}catch{return structuredClone(defaultState)}}
