@@ -506,6 +506,13 @@ host.querySelector('#recipe-toggle-filters').onclick=()=>{
 recipeFilters.show=!recipeFilters.show;
 renderRecipes();
 };
+  const category=host.querySelector('#recipe-category');
+category.value=recipeFilters.category;
+
+category.onchange=()=>{
+recipeFilters.category=category.value;
+renderRecipes();
+};
 }
 
 function filteredCharacters(){
