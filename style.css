@@ -816,3 +816,41 @@ footer {
 #daily-details .daily-list {
   padding-top: 12px;
 }
+/* Dépliage des objectifs */
+#goals-details {
+  margin-top: 10px;
+}
+
+#goals-details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fffaf5;
+  color: var(--navy);
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+#goals-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+#goals-details > summary::after {
+  content: "+";
+  color: var(--rose);
+  font-size: 14px;
+  line-height: 1;
+}
+
+#goals-details[open] > summary::after {
+  content: "−";
+}
+
+#goals-details #goals-list {
+  padding-top: 12px;
+}
