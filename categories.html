@@ -21,11 +21,13 @@
 
   <main class="page-shell">
 
-    <section class="catalog-section">
-      <button class="text-button" id="back-home" type="button">
+    <nav class="page-navigation" aria-label="Navigation principale">
+      <a class="text-button page-back" id="back-home" href="index.html">
         ← Retour à l'accueil
-      </button>
+      </a>
+    </nav>
 
+    <section class="catalog-section">
       <label class="search-box">
         <span>⌕</span>
         <input id="global-search" type="search"
@@ -39,25 +41,11 @@
         <div>
           <p class="eyebrow">TOUT POUR EXPLORER</p>
           <h2>Mon encyclopédie</h2>
+          <p class="muted">Choisis une catégorie pour ouvrir sa page dédiée.</p>
         </div>
       </div>
 
       <div id="category-grid" class="category-grid"></div>
-    </section>
-
-    <section id="catalog-view"
-      class="panel catalog-view hidden"
-      aria-live="polite">
-
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">MON ENCYCLOPÉDIE</p>
-          <h2 id="catalog-title">Catalogue</h2>
-        </div>
-        
-</div> 
-      <p id="catalog-description" class="muted"></p>
-      <div id="catalog-items" class="catalog-items"></div>
     </section>
 
   </main>
@@ -68,5 +56,6 @@
   </footer>
 
   <script src="app.js?v=20261127-5" defer></script>
+  <script src="pages/navigation.js" defer></script>
 </body>
 </html>

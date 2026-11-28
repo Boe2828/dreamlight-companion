@@ -1,11 +1,12 @@
 const CATEGORIES = [
-{id:'characters',name:'Personnages',icon:'👑',file:'characters.json',description:'Tes personnages, leur amitié et leur rôle.'},
-{id:'recipes',name:'Recettes',icon:'🍲',file:'recipes.json',description:'Toutes les recettes du jeu, leurs ingrédients et leurs valeurs.'},
-{id:'resources',name:'Ressources & cultures',icon:'💎',file:'resources.json',description:'Toutes les ressources, les récoltes et les cultures.'},
-{id:'exploration',name:'Exploration',icon:'🌳',file:'biomes.json',description:'Les biomes, le château et les royaumes.'},
-{id:'crafting',name:'Artisanat',icon:'🛠️',file:'crafting.json',description:'Les objets à fabriquer et les matériaux nécessaires.'},
-{id:'creatures',name:'Créatures',icon:'🐿️',file:'creatures.json',description:'Les animaux, leur nourriture et les compagnons.'},
-{id:'chests',name:'Mes coffres',icon:'📦',file:'chests.json',description:'Organise tes coffres et suis tes réserves.'}
+{id:'characters',name:'Personnages',icon:'👑',file:'characters.json',page:'personnages.html',description:'Tes personnages, leur amitié et leur rôle.'},
+{id:'recipes',name:'Recettes',icon:'🍲',file:'recipes.json',page:'recettes.html',description:'Toutes les recettes du jeu, leurs ingrédients et leurs valeurs.'},
+{id:'resources',name:'Ressources & cultures',icon:'💎',file:'resources.json',page:'ressources.html',description:'Toutes les ressources, les récoltes et les cultures.'},
+{id:'crafting',name:'Artisanat',icon:'🛠️',file:'crafting.json',page:'artisanat.html',description:'Les objets à fabriquer et les matériaux nécessaires.'},
+{id:'exploration',name:'Exploration',icon:'🌳',file:'biomes.json',page:'exploration.html',description:'Les biomes, le château et les royaumes.'},
+{id:'creatures',name:'Créatures',icon:'🐿️',file:'creatures.json',page:'creatures.html',description:'Les animaux, leur nourriture et les compagnons.'},
+{id:'chests',name:'Mes coffres',icon:'📦',file:'chests.json',page:'coffres.html',description:'Organise tes coffres et suis tes réserves.'},
+{id:'favorites',name:'Favoris',icon:'⭐',file:null,page:'favoris.html',description:'Retrouve tes éléments favoris.'}
 ];
 
 const STORAGE_KEY='dreamlight-companion-v1';
@@ -319,7 +320,7 @@ c.name.toLocaleLowerCase('fr').includes(s)||
 .map(c=>{
 const z=categoryStats(c);
 return `
-<button class="category-card" data-category="${c.id}">
+<a class="category-card" href="pages/${c.page}">
 <span class="category-top">
 <span class="category-icon">${c.icon}</span>
 <span class="category-progress">${z.total?z.pct+' %':'À compléter'}</span>
@@ -328,13 +329,10 @@ return `
 <span class="category-progress">
 ${z.total?z.done+' / '+z.total+' découverts':'Catalogue en préparation'}
 </span>
-</button>`;
+</a>`;
 })
 .join('');
 
-grid.querySelectorAll('[data-category]').forEach(b=>{
-b.onclick=()=>openCategory(b.dataset.category);
-});
 }
 
 function updateProgress(){
@@ -355,7 +353,7 @@ if(search)renderCategories(search.value);
 }
 
 async function loadCatalogs(){
-await Promise.all(CATEGORIES.map(async c=>{
+await Promise.all(CATEGORIES.filter(c=>c.file).map(async c=>{
 try{
 const r=await fetch('data/'+c.file+'?v=20261127-2',{cache:'no-store'});
 if(!r.ok)throw Error();
@@ -914,24 +912,27 @@ renderCategories(e.target.value);
 });
 }
 
-// Retour par glissement horizontal sur une fiche personnage.
-let pointerStartX=0;
-let pointerStartY=0;
+// Retour par glissement horizontal commencé au bord gauche.
+let pointerStart=null;
 
 document.addEventListener('pointerdown',e=>{
-if(e.pointerType!=='touch')return;
+if(e.pointerType!=='touch'||e.clientX>40||
+e.target.closest('input,textarea,select,button,a,[contenteditable="true"]')){
+pointerStart=null;
+return;
+}
 
-pointerStartX=e.clientX;
-pointerStartY=e.clientY;
+pointerStart={x:e.clientX,y:e.clientY};
 });
 
 document.addEventListener('pointerup',e=>{
-if(e.pointerType!=='touch')return;
+if(e.pointerType!=='touch'||!pointerStart)return;
 
-const dx=e.clientX-pointerStartX;
-const dy=e.clientY-pointerStartY;
+const dx=e.clientX-pointerStart.x;
+const dy=e.clientY-pointerStart.y;
+pointerStart=null;
 
-if(dx>90&&Math.abs(dx)>Math.abs(dy)*1.3){
+if(dx>85&&Math.abs(dx)>Math.abs(dy)*1.4){
 if(window.location.pathname.endsWith('categories.html')){
 window.location.href='index.html';
 return;
@@ -1231,4 +1232,7 @@ renderTasks();
 renderGoals();
 renderSessions();
 }
-loadCatalogs();
+loadCatalogs().then(()=>{
+const initialCategory=document.body.dataset.initialCategory;
+if(initialCategory)openCategory(initialCategory);
+});
