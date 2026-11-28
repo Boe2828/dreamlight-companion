@@ -960,3 +960,40 @@ footer {
 .character-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+
+
+/* Accès principal aux catégories depuis l'accueil */
+.catalog-access {
+  width: 100%;
+}
+
+.catalog-access #explore-categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 56px;
+  padding: 15px 20px;
+  border: 1px solid rgba(201, 143, 115, 0.28);
+  border-radius: 15px;
+  background: linear-gradient(135deg, #343d50, #46516a);
+  color: #fffdf9;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  box-shadow: 0 7px 18px rgba(52, 61, 80, 0.16);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.catalog-access #explore-categories:active {
+  transform: scale(0.985);
+  box-shadow: 0 3px 10px rgba(52, 61, 80, 0.14);
+}
+
+@media (min-width: 600px) {
+  .catalog-access #explore-categories {
+    min-height: 60px;
+    font-size: 15px;
+  }
+}
